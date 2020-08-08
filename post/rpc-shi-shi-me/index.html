@@ -1,0 +1,214 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RPC 是什么？ | Gridea</title>
+<link rel="shortcut icon" href="https://jiannanh.github.io/favicon.ico?v=1596877369258">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://jiannanh.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="RPC 是什么？ | Gridea - Atom Feed" href="https://jiannanh.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="RPC 是什么？
+1. RPC是什么
+RPC （Remote Procedure Call) 远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。
+Rpc协议假定默写传输协议的存在，如 TCP 或 UD..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://jiannanh.github.io">
+  <img class="avatar" src="https://jiannanh.github.io/images/avatar.png?v=1596877369258" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              RPC 是什么？
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-08-08
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="rpc-是什么">RPC 是什么？</h1>
+<h2 id="1-rpc是什么">1. RPC是什么</h2>
+<p>RPC （Remote Procedure Call) 远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。</p>
+<p>Rpc协议假定默写传输协议的存在，如 TCP 或 UDP，为通讯之间携带信息数据。在 OIS 网络通信模型之中， RPC 跨越了传输层和应用层。RPC 使得开发网络分布式多程序在内的应用程序变得更加容易。</p>
+<h2 id="2-restful-和-rpc">2. Restful 和 RPC</h2>
+<p><a href="https://baike.baidu.com/item/RESTful">restful 百度百科</a></p>
+<blockquote>
+<p>RESTFUL 是一种网络应用程序的设计风格和开发方式，基于 HTTP ，可以使用 XML 格式定义或 JSON 格式定义。RESTFUL 适用于移动互联网厂商作为业务使能接口的场景，实现第三方 OTT 调用移动网络资源的功能，动作类型为新增、变更、删除所调用资源。<br>
+其实这两者并不是一个维度的概念，总得来说RPC涉及的维度更广。</p>
+</blockquote>
+<p>如果硬要比较，那么可以从RPC风格的url和Restful风格的url上进行比较。</p>
+<p>比如你提供一个查询订单的接口，用RPC风格，你可能会这样写：</p>
+<pre><code>/queryOrder?orderId=123
+</code></pre>
+<p>用Restful风格呢？</p>
+<pre><code>Get  
+/order?orderId=123
+</code></pre>
+<p>RPC是面向过程，Restful是面向资源，并且使用了Http动词。从这个维度上看，Restful风格的url在表述的精简性、可读性上都要更好。</p>
+<h2 id="rpc没那么简单">RPC没那么简单</h2>
+<p>要实现一个RPC不算难，难的是实现一个高性能高可靠的RPC框架。</p>
+<p>比如，既然是分布式了，那么一个服务可能有多个实例，你在调用时，要如何获取这些实例的地址呢？</p>
+<p>这时候就需要一个服务注册中心，比如在Dubbo里头，就可以使用Zookeeper作为注册中心，在调用时，从Zookeeper获取服务的实例列表，再从中选择一个进行调用。</p>
+<p>那么选哪个调用好呢？这时候就需要负载均衡了，于是你又得考虑如何实现复杂均衡，比如Dubbo就提供了好几种负载均衡策略。</p>
+<p>这还没完，总不能每次调用时都去注册中心查询实例列表吧，这样效率多低呀，于是又有了缓存，有了缓存，就要考虑缓存的更新问题，blablabla......</p>
+<p>你以为就这样结束了，没呢，还有这些：</p>
+<p>客户端总不能每次调用完都干等着服务端返回数据吧，于是就要支持异步调用；<br>
+服务端的接口修改了，老的接口还有人在用，怎么办？总不能让他们都改了吧？这就需要版本控制了；<br>
+服务端总不能每次接到请求都马上启动一个线程去处理吧？于是就需要线程池；<br>
+服务端关闭时，还没处理完的请求怎么办？是直接结束呢，还是等全部请求处理完再关闭呢？<br>
+......<br>
+如此种种，都是一个优秀的RPC框架需要考虑的问题。</p>
+<p>当然，接下来我们还是先实现一个简单的RPC，再在上面一步步优化！</p>
+<h2 id="为什么要用-rpc">为什么要用 RPC</h2>
+<p>无感知调用<br>
+RPC 可以定制化，可以减少传输过程之中的一些损耗。<br>
+RPC 基于的协议可能是 TCP 或者 UDP 让网络传输更快。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#rpc-%E6%98%AF%E4%BB%80%E4%B9%88">RPC 是什么？</a>
+<ul>
+<li><a href="#1-rpc%E6%98%AF%E4%BB%80%E4%B9%88">1. RPC是什么</a></li>
+<li><a href="#2-restful-%E5%92%8C-rpc">2. Restful 和 RPC</a></li>
+<li><a href="#rpc%E6%B2%A1%E9%82%A3%E4%B9%88%E7%AE%80%E5%8D%95">RPC没那么简单</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-rpc">为什么要用 RPC</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://jiannanh.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://jiannanh.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
