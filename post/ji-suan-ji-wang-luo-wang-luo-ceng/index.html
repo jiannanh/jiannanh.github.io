@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | Gridea</title>
+<title>计算机网络 - 网络层 | Gridea</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,14 +18,17 @@
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
+    <meta name="description" content="IP
+主要任务是把分组从源端传到目的端，为分组交换网上的不同主机提供通信服务。网络层传输单位是数据报。
+功能1：路由选择与分组转发最佳路径
+功能2：实现异构网络的互联
+功能3：拥塞控制
+数据交换方式
+多路复用
+报文交换
+优点：
 
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
-..." />
+无需建立连..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -97,20 +100,62 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">计算机网络 - 网络层</h2>
+            <div class="post-date">2020-08-09</div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+              <p>IP<br>
+主要任务是把分组从源端传到目的端，为分组交换网上的不同主机提供通信服务。网络层传输单位是数据报。<br>
+功能1：路由选择与分组转发最佳路径<br>
+功能2：实现异构网络的互联<br>
+功能3：拥塞控制</p>
+<h2 id="数据交换方式">数据交换方式</h2>
+<p>多路复用</p>
+<h3 id="报文交换">报文交换</h3>
+<p>优点：</p>
+<ol>
+<li>无需建立连接</li>
+<li>存储转发动态分配线路</li>
+<li>线路可靠性高</li>
+<li>线路利用率较高</li>
+<li>多目标服务</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>有存储时延</li>
+<li>报文大小不确定，需要网络罗节点偶较大的存储空间。</li>
+</ol>
+<h3 id="分组交换">分组交换</h3>
+<ol>
+<li>无需建立连接</li>
+<li>存储转发，动态分贝线路</li>
+<li>线路可靠性较高</li>
+<li>线路利用率较高</li>
+<li>有利与报文交换，存储管理容易</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>有存储时延</li>
+<li>需要额外的信息量</li>
+<li>乱序到目的主机时，要对分组排序重组</li>
+</ol>
+<h2 id="几种传输单元名词辨析">几种传输单元名词辨析</h2>
+<figure data-type="image" tabindex="1"><img src="https://jiannanh.github.io/post-images/1596973848020.png" alt="" loading="lazy"></figure>
+<h3 id="数据报">数据报</h3>
+<p>无连接：不是先为分组的传输确定传输路径，每个分组独立确定传输路径，不同分组传输路径可能不同。</p>
+<h2 id="路由算法和路由协议">路由算法和路由协议</h2>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-tcpip-mo-xing/">
+                  <h3 class="post-title">
+                    计算机网络 - 1.3TCP/IP模型
+                  </h3>
+                </a>
+              </div>
             
 
             
