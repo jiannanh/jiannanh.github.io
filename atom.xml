@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jiannanh.github.io</id>
     <title>Gridea</title>
-    <updated>2020-08-09T08:25:48.627Z</updated>
+    <updated>2020-08-09T09:19:41.517Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jiannanh.github.io"/>
     <link rel="self" href="https://jiannanh.github.io/atom.xml"/>
@@ -18,7 +18,8 @@
         <updated>2020-08-09T08:17:18.000Z</updated>
         <content type="html"><![CDATA[<p>TCP/IP是实时模型<br>
 TCP/IP是先实践在生成的模型<br>
-<img src="https://jiannanh.github.io/post-images/1596961494042.png" alt="" loading="lazy"></p>
+<img src="https://jiannanh.github.io/post-images/1596961494042.png" alt="" loading="lazy"><br>
+<img src="https://jiannanh.github.io/post-images/1596964775219.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
