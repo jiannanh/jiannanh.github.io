@@ -1,49 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jiannanh.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-08-17T12:03:25.312Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jiannanh.github.io"/>
-    <link rel="self" href="https://jiannanh.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://jiannanh.github.io/images/avatar.png</logo>
-    <icon>https://jiannanh.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[leetcode目录页面]]></title>
-        <id>https://jiannanh.github.io/post/leetcode-mu-lu-ye-mian/</id>
-        <link href="https://jiannanh.github.io/post/leetcode-mu-lu-ye-mian/">
-        </link>
-        <updated>2020-08-12T08:21:41.000Z</updated>
-        <content type="html"><![CDATA[<p>跳转到相应的专题<br>
-<a href="">Array</a><br>
-String<br>
-Math<br>
-Tree<br>
-Backtracking<br>
-Dynamic Programming<br>
-LinkedList<br>
-Binary Search<br>
-Matrix<br>
-DFS &amp; BFS<br>
-Stack &amp; PriorityQueue<br>
-Bit Manipulation<br>
-Topological Sort<br>
-Random<br>
-Graph<br>
-Union Find<br>
-Trie<br>
-Design</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RPC]]></title>
-        <id>https://jiannanh.github.io/post/rpc/</id>
-        <link href="https://jiannanh.github.io/post/rpc/">
-        </link>
-        <updated>2020-08-11T02:23:51.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="rpc-是什么">RPC 是什么？</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>RPC | Gridea</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jiannanh.github.io/favicon.ico?v=1597665801784">
+<link rel="stylesheet" href="https://jiannanh.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="RPC 是什么？
+1. RPC是什么
+RPC （Remote Procedure Call) 远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。
+Rpc协议假定默写传输协议的存在，如 TCP 或 UD..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jiannanh.github.io">
+        <img src="https://jiannanh.github.io/images/avatar.png?v=1597665801784" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://jiannanh.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">RPC</h2>
+            <div class="post-date">2020-08-11</div>
+            
+              <div class="feature-container" style="background-image: url('https://jiannanh.github.io/post-images/rpc.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="rpc-是什么">RPC 是什么？</h1>
 <h2 id="1-rpc是什么">1. RPC是什么</h2>
 <p>RPC （Remote Procedure Call) 远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。</p>
 <p>Rpc协议假定默写传输协议的存在，如 TCP 或 UDP，为通讯之间携带信息数据。在 OIS 网络通信模型之中， RPC 跨越了传输层和应用层。RPC 使得开发网络分布式多程序在内的应用程序变得更加容易。</p>
@@ -155,194 +212,46 @@ message HelloReply {
 </code></pre>
 <h2 id="protocol-buffer版本"><a href="#protocol-buffer%E7%89%88%E6%9C%AC">Protocol Buffer版本</a></h2>
 <p>通常，虽然您可以使用proto2（当前的默认协议缓冲区版本），但建议您将proto3与gRPC一起使用，因为它可以使用gRPC支持的所有语言，并且可以避免与proto2客户端通信时出现的兼容性问题。 proto3服务器，反之亦然。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[数据库面试]]></title>
-        <id>https://jiannanh.github.io/post/shu-ju-ku-mian-shi/</id>
-        <link href="https://jiannanh.github.io/post/shu-ju-ku-mian-shi/">
-        </link>
-        <updated>2020-08-10T07:36:04.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>https://blog.csdn.net/ThinkWon/article/details/104778621</p>
-<p><a href="#%E5%89%8D%E8%A8%80">前言</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 - 网络层]]></title>
-        <id>https://jiannanh.github.io/post/ji-suan-ji-wang-luo-wang-luo-ceng/</id>
-        <link href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-wang-luo-ceng/">
-        </link>
-        <updated>2020-08-09T11:20:00.000Z</updated>
-        <content type="html"><![CDATA[<p>IP<br>
-主要任务是把分组从源端传到目的端，为分组交换网上的不同主机提供通信服务。网络层传输单位是数据报。<br>
-功能1：路由选择与分组转发最佳路径<br>
-功能2：实现异构网络的互联<br>
-功能3：拥塞控制</p>
-<h2 id="数据交换方式">数据交换方式</h2>
-<p>多路复用</p>
-<h3 id="报文交换">报文交换</h3>
-<p>优点：</p>
-<ol>
-<li>无需建立连接</li>
-<li>存储转发动态分配线路</li>
-<li>线路可靠性高</li>
-<li>线路利用率较高</li>
-<li>多目标服务</li>
-</ol>
-<p>缺点：</p>
-<ol>
-<li>有存储时延</li>
-<li>报文大小不确定，需要网络罗节点偶较大的存储空间。</li>
-</ol>
-<h3 id="分组交换">分组交换</h3>
-<ol>
-<li>无需建立连接</li>
-<li>存储转发，动态分贝线路</li>
-<li>线路可靠性较高</li>
-<li>线路利用率较高</li>
-<li>有利与报文交换，存储管理容易</li>
-</ol>
-<p>缺点：</p>
-<ol>
-<li>有存储时延</li>
-<li>需要额外的信息量</li>
-<li>乱序到目的主机时，要对分组排序重组</li>
-</ol>
-<h2 id="几种传输单元名词辨析">几种传输单元名词辨析</h2>
-<figure data-type="image" tabindex="1"><img src="https://jiannanh.github.io/post-images/1596973848020.png" alt="" loading="lazy"></figure>
-<h3 id="数据报">数据报</h3>
-<p>无连接：不是先为分组的传输确定传输路径，每个分组独立确定传输路径，不同分组传输路径可能不同。</p>
-<h2 id="路由算法和路由协议">路由算法和路由协议</h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 - 1.3TCP/IP模型]]></title>
-        <id>https://jiannanh.github.io/post/ji-suan-ji-wang-luo-tcpip-mo-xing/</id>
-        <link href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-tcpip-mo-xing/">
-        </link>
-        <updated>2020-08-09T08:17:18.000Z</updated>
-        <content type="html"><![CDATA[<p>TCP/IP是实时模型<br>
-TCP/IP是先实践在生成的模型<br>
-<img src="https://jiannanh.github.io/post-images/1596961494042.png" alt="" loading="lazy"><br>
-<img src="https://jiannanh.github.io/post-images/1596964775219.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 - 1.2OSI分层]]></title>
-        <id>https://jiannanh.github.io/post/ji-suan-ji-wang-luo-osi-fen-ceng/</id>
-        <link href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-osi-fen-ceng/">
-        </link>
-        <updated>2020-08-09T06:33:09.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="osi-分层">OSI 分层</h2>
-<p>7层OSI法定标准<br>
-物理层 - 数据链路层 - 网络层 - 传输层 - 会话层- 表示层 - 应用层<br>
-通信子网 -           - 资源子网<br>
-物联网输会示用</p>
-<p>5层体系结构，方便学习。<br>
-4层事实模型</p>
-<ol>
-<li>
-<p>应用层<br>
-需要上网才能使用的程序</p>
-</li>
-<li>
-<p>表示层<br>
-处理两个通讯徐通中光交换信息的表示方式<br>
-功能1：数据格式变换<br>
-功能2：数据加密解密<br>
-功能3：数据压缩和恢复</p>
-</li>
-<li>
-<p>会话层<br>
-建立连接并在连接上有序地传输数据。这就是会话也是建立同步（SYN）。<br>
-功能1：建立、管理、终止会话<br>
-功能2：使用校验点可是会话在通讯失效时从校验点、同步点继续灰度通讯，实现数据同步。</p>
-</li>
-<li>
-<p>传输层<br>
-负责主机中两个进程的通信，即端到端的通信。传输单位是保温段或用户数据报。<br>
-1：可靠传输、不可靠传输<br>
-2：差错控制<br>
-3：流量控制<br>
-4：复用分用</p>
-</li>
-<li>
-<p>网络层<br>
-主要任务是把分组从远端传到目的端，为分组交换网上的不同主机提供通信服务网络层传输单位是数据拥报。<br>
-功能1：路由选择<br>
-功能2：流量选择<br>
-功能3：差错控制<br>
-功能4：拥塞控制</p>
-</li>
-<li>
-<p>数据链路层<br>
-把网络层传下来的数据报组装成帧<br>
-数据链路层/链路层的传输单位是帧。<br>
-功能1：成帧<br>
-功能2：差错控制<br>
-功能3：流量控制<br>
-功能4：访问（接入）控制</p>
-</li>
-<li>
-<p>物理层<br>
-主要任务是在物理媒体上实现比特流的透明传输。<br>
-物理层传输单位是比特<br>
-功能1：定义接口特性<br>
-功能2：定义传输模式<br>
-功能3：定义传输速率<br>
-功能4：比特同步<br>
-功能4：比特编码</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 - 1.1速率相关性能指标]]></title>
-        <id>https://jiannanh.github.io/post/ji-suan-ji-wang-luo-su-lu-xiang-guan-xing-neng-zhi-biao/</id>
-        <link href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-su-lu-xiang-guan-xing-neng-zhi-biao/">
-        </link>
-        <updated>2020-08-09T05:37:39.000Z</updated>
-        <content type="html"><![CDATA[<p>塑料布及数据率或称数据传输率或比特率，<br>
-比特 1 / 0<br>
-链接在计算机网络上的主机在数字通道上传送数据的速率。<br>
-1 byte = 8 bite</p>
-<h2 id="带宽">带宽</h2>
-<ol>
-<li><strong>带宽</strong>原本值莫格信号具有的频带宽度，即最高频率与最低频率之差，单位是 Hz。</li>
-<li>计算机网络中，<strong>带宽</strong>用来表示网络的通信线路传送数据的能力，通常是指单位时间内从网络 中的抹一点到零一点所能通过的 <font  color="red">最高数据率</font >。 单位是 ”比特每秒“，b/s，kb/s 。。、<br>
-是网络设备所支持的最高速率</li>
-</ol>
-<h2 id="吞吐量">吞吐量</h2>
-<p>单位时间内通过某个网络（或信道、接口）的数据量，单位是b/s，kb/s<br>
-吞吐量收网络的带宽或者网络的额定速率的限制。</p>
-<h2 id="时延">时延</h2>
-<p>是数据（报文、分组、比特流）从网络（链路）的一端传送到另一端所需要的事件。也叫延迟或者迟延。单位是 s。<br>
-时延 = 发送时延 + 传播时延 + 排队时延 + 处理时延</p>
-<ol>
-<li>
-<p>发送时延<br>
-从发送分组的第一个比特算起到该分组的最后一个比特发送所需要的时间。<br>
-发送时延 = 数据长度 / 信道带宽</p>
-</li>
-<li>
-<p>传播时延<br>
-电磁波的传播速度和链路长度<br>
-传播时延 = 链路长度 / 电磁波的传播速度</p>
-</li>
-<li>
-<p>排队时延<br>
-在路由器等待输入和输出的时间</p>
-</li>
-<li>
-<p>处理时延<br>
-检查找出口，路由器检查错误，并且决定从那个端口输出。</p>
-</li>
-<li>
-<p>往返时延 RTT<br>
-从发送方开始发送数据开始，到发送当接收到接收方是确认，总共时延。</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jiannanh.github.io/post/shu-ju-ku-mian-shi/">
+                  <h3 class="post-title">
+                    数据库面试
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
