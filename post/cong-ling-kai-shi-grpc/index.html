@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>RPC | Gridea</title>
+<title>从零开始，gRPC-web | Gridea</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -20,8 +20,8 @@
 
     <meta name="description" content="RPC 是什么？
 1. RPC是什么
-RPC （Remote Procedure Call) 远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。
-Rpc协议假定默写传输协议的存在，如 TCP 或 UD..." />
+
+在分布式计算中，远程过程调用（RPC）是指计算机程序使过程（子例程）在不同的地址空间（通常在共享网络的另一台计算机上）执行时，远程的过程就像是普通的（本地）调用，而无需程序员为远程过程写过多的代码。即..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -93,75 +93,38 @@ Rpc协议假定默写传输协议的存在，如 TCP 或 UD..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">RPC</h2>
-            <div class="post-date">2020-08-11</div>
+            <h2 class="post-title">从零开始，gRPC-web</h2>
+            <div class="post-date">2020-08-17</div>
             
-              <div class="feature-container" style="background-image: url('https://jiannanh.github.io/post-images/rpc.png')">
+              <div class="feature-container" style="background-image: url('https://jiannanh.github.io/post-images/cong-ling-kai-shi-grpc.png')">
               </div>
             
             <div class="post-content" v-pre>
               <h1 id="rpc-是什么">RPC 是什么？</h1>
 <h2 id="1-rpc是什么">1. RPC是什么</h2>
-<p>RPC （Remote Procedure Call) 远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。</p>
-<p>Rpc协议假定默写传输协议的存在，如 TCP 或 UDP，为通讯之间携带信息数据。在 OIS 网络通信模型之中， RPC 跨越了传输层和应用层。RPC 使得开发网络分布式多程序在内的应用程序变得更加容易。</p>
-<h2 id="2-restful-和-rpc">2. Restful 和 RPC</h2>
-<p><a href="https://baike.baidu.com/item/RESTful">restful 百度百科</a></p>
 <blockquote>
-<p>RESTFUL 是一种网络应用程序的设计风格和开发方式，基于 HTTP ，可以使用 XML 格式定义或 JSON 格式定义。RESTFUL 适用于移动互联网厂商作为业务使能接口的场景，实现第三方 OTT 调用移动网络资源的功能，动作类型为新增、变更、删除所调用资源。<br>
-其实这两者并不是一个维度的概念，总得来说RPC涉及的维度更广。</p>
+<p>在分布式计算中，远程过程调用（RPC）是指计算机程序使过程（子例程）在不同的地址空间（通常在共享网络的另一台计算机上）执行时，远程的过程就像是普通的（本地）调用，而无需程序员为远程过程写过多的代码。即，无论子例程是正在执行的程序是本地程序还是远程程序，程序员都编写基本相同的代码。这是客户端-服务器交互的一种形式（客户端调用，服务器执行），通常是通过请求-响应消息传递系统来实现的。在面向对象的编程语言（JAVA）中，RPC由远程方法调用表示（RMI）。RPC模型意味着一定程度的位置透明性，即无论本地还是远程，调用过程在很大程度上是相同的，但是实质上它们并不相同，（感受上很像是在本地，但是实际上是在远程调用）因此可以将本地调用与远程调用区分开。<br>
+远程呼叫通常比本地呼叫慢几个数量级，并且可靠性较差，因此区分它们很重要。（但是实际应用中，前后端是分离的，这样的比较对rpc来说并不公平）<br>
+wiki 要记得修饰一下。<a href="https://en.wikipedia.org/wiki/Remote_procedure_call">Remote procedure call</a></p>
 </blockquote>
-<p>如果硬要比较，那么可以从RPC风格的url和Restful风格的url上进行比较。</p>
-<p>比如你提供一个查询订单的接口，用RPC风格，你可能会这样写：</p>
-<pre><code>/queryOrder?orderId=123
-</code></pre>
-<p>用Restful风格呢？</p>
-<pre><code>Get  
-/order?orderId=123
-</code></pre>
-<p>RPC是面向过程，Restful是面向资源，并且使用了Http动词。从这个维度上看，Restful风格的url在表述的精简性、可读性上都要更好。</p>
-<h2 id="rpc没那么简单">RPC没那么简单</h2>
-<p>要实现一个RPC不算难，难的是实现一个高性能高可靠的RPC框架。</p>
-<p>比如，既然是分布式了，那么一个服务可能有多个实例，你在调用时，要如何获取这些实例的地址呢？</p>
-<p>这时候就需要一个服务注册中心，比如在Dubbo里头，就可以使用Zookeeper作为注册中心，在调用时，从Zookeeper获取服务的实例列表，再从中选择一个进行调用。</p>
-<p>那么选哪个调用好呢？这时候就需要负载均衡了，于是你又得考虑如何实现复杂均衡，比如Dubbo就提供了好几种负载均衡策略。</p>
-<p>这还没完，总不能每次调用时都去注册中心查询实例列表吧，这样效率多低呀，于是又有了缓存，有了缓存，就要考虑缓存的更新问题，blablabla......</p>
-<p>你以为就这样结束了，没呢，还有这些：</p>
-<p>客户端总不能每次调用完都干等着服务端返回数据吧，于是就要支持异步调用；<br>
-服务端的接口修改了，老的接口还有人在用，怎么办？总不能让他们都改了吧？这就需要版本控制了；<br>
-服务端总不能每次接到请求都马上启动一个线程去处理吧？于是就需要线程池；<br>
-服务端关闭时，还没处理完的请求怎么办？是直接结束呢，还是等全部请求处理完再关闭呢？<br>
-......<br>
-如此种种，都是一个优秀的RPC框架需要考虑的问题。</p>
-<p>当然，接下来我们还是先实现一个简单的RPC，再在上面一步步优化！</p>
-<h2 id="为什么要用-rpc">为什么要用 RPC</h2>
+<p>从上面的 Wiki 中可以看出 RPC 更多像是一种概念。目前，RPC 这种概念已经被许多不同的（通常是不兼容的）技术已被用来实现。包括gRPC。</p>
+<h2 id="2-restful-和-rpc">2. Restful 和 RPC</h2>
+<p>RPC是面向过程，RESTful 是面向资源也就是 url，并且使用了 HTTP 操作。从这个维度上看，RESTful风格的 url 在表述的精简性、可读性上都要更好。</p>
+<p>其他的诸如，协议版本，RPC 中的代理序列化等差异。我个人觉得只是实现上的区别。</p>
+<h2 id="为什么要用-rpc-grpc-web">为什么要用 RPC || gRPC-web</h2>
 <p>最开始应用都是单体的应用，开发比较简单，但程序部署比较麻烦。如果有一个环节出了问题，也可以比较快的横向扩展。大的应用之间的通信需要使用rpc进行通信。</p>
 <p>无感知调用<br>
 RPC 可以定制化，可以减少传输过程之中的一些损耗。<br>
 RPC 基于的协议可能是 TCP 或者 UDP 让网络传输更快。</p>
-<h2 id="rpc模块">RPC模块</h2>
-<p>通信经过网络，传统的单体应用要通过接口。远程的方法是如何使用的。我也可以把远程的方法变成接口。通过代理技术。在调用的过程中，对方法进行拦截，对参数进行序列化。在序列化的过程中，拿到目标地址。编解码后，传到网络上。目标地址监听网络，拿到数据包进行解码，拿到二进制数据进行反序列化。通过反射执行。通过相反的路传回给调用方。调用方获得结果。<br>
-<img src="https://jiannanh.github.io/post-images/1597113191937.png" alt="" loading="lazy"></p>
-<h2 id="rpc架构">RPC架构</h2>
-<figure data-type="image" tabindex="1"><img src="https://jiannanh.github.io/post-images/1597113273813.png" alt="" loading="lazy"></figure>
-<p>协议<br>
-数据流 -&gt; 请求1 请求2 请求3 ... 请求N</p>
-<p>序列化<br>
-JDK，只有JAVA可以用<br>
-JSON，性能有欠缺<br>
-Hessian<br>
-Protobuf</p>
-<p>反序列化<br>
-反序列化安全问题<br>
-白名单：</p>
-<ol>
-<li>扫描接口类声明的类型</li>
-<li>系统内置白名单</li>
-<li>用户定义白名单</li>
-</ol>
+<p>开发模式的提升，就像是前后端分离的理念细化了分工，提升了效率和代码质量。gRPC-web （或许）能节约对接口的复杂过程。对接多个不同语言代码的后端。所有的语言共一个接口写法。</p>
+<h2 id="rpc-从0开始">RPC 从0开始</h2>
+<p>接下来这一段是真真实实的从0开始，如果你和我一样是一个rpc小白的话，我</p>
 <h2 id="grpc">gRPC</h2>
 <p>高性能，开源通用RPC框架</p>
 <h3 id="为什么选择grpc">为什么选择gRPC？</h3>
 <p>gRPC是可以在任何环境中运行的现代开源高性能RPC框架。它可以通过插件来支持有效地连接数据中心内和跨数据中心的服务，以实现负载平衡，跟踪，运行状况检查和身份验证。它也适用于分布式计算的最后步骤，以将设备，移动应用程序和浏览器连接到后端服务。</p>
+<pre><code>使用gRPC，您可以在.proto文件中一次定义服务，并以gRPC支持的任何语言来实现客户端和服务器，而这些语言又可以在从大型数据中心内的服务器到您自己的平板电脑的环境中运行-这一切的复杂性gRPC为您处理不同语言和环境之间的通信。您还将获得使用协议缓冲区的所有优点，包括高效的序列化，简单的IDL和轻松的接口更新。gRPC-Web使您可以使用惯用的API从浏览器访问以这种方式构建的gRPC服务。
+</code></pre>
 <h3 id="grpc的四个优点">gRPC的四个优点</h3>
 <ol>
 <li>简单的服务定义<br>
@@ -212,15 +175,35 @@ message HelloReply {
 </code></pre>
 <h2 id="protocol-buffer版本"><a href="#protocol-buffer%E7%89%88%E6%9C%AC">Protocol Buffer版本</a></h2>
 <p>通常，虽然您可以使用proto2（当前的默认协议缓冲区版本），但建议您将proto3与gRPC一起使用，因为它可以使用gRPC支持的所有语言，并且可以避免与proto2客户端通信时出现的兼容性问题。 proto3服务器，反之亦然。</p>
+<h2 id="rpc-模块-如何搭建一个-rpc">RPC 模块 - 如何搭建一个 RPC</h2>
+<p>通信经过网络，传统的单体应用要通过接口。远程的方法是如何使用的。我也可以把远程的方法变成接口。通过代理技术。在调用的过程中，对方法进行拦截，对参数进行序列化。在序列化的过程中，拿到目标地址。编解码后，传到网络上。目标地址监听网络，拿到数据包进行解码，拿到二进制数据进行反序列化。通过反射执行。通过相反的路传回给调用方。调用方获得结果。<br>
+<img src="https://jiannanh.github.io/post-images/1597113191937.png" alt="" loading="lazy"></p>
+<h2 id="rpc架构">RPC架构</h2>
+<figure data-type="image" tabindex="1"><img src="https://jiannanh.github.io/post-images/1597113273813.png" alt="" loading="lazy"></figure>
+<p>协议<br>
+数据流 -&gt; 请求1 请求2 请求3 ... 请求N</p>
+<p>序列化<br>
+JDK，只有JAVA可以用<br>
+JSON，性能有欠缺<br>
+Hessian<br>
+Protobuf</p>
+<p>反序列化<br>
+反序列化安全问题<br>
+白名单：</p>
+<ol>
+<li>扫描接口类声明的类型</li>
+<li>系统内置白名单</li>
+<li>用户定义白名单</li>
+</ol>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://jiannanh.github.io/post/shu-ju-ku-mian-shi/">
+                <a href="https://jiannanh.github.io/post/leetcode-mu-lu-ye-mian/">
                   <h3 class="post-title">
-                    数据库面试
+                    leetcode目录页面
                   </h3>
                 </a>
               </div>
