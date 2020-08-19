@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jiannanh.github.io</id>
     <title>Gridea</title>
-    <updated>2020-08-19T03:54:48.304Z</updated>
+    <updated>2020-08-19T03:59:00.914Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jiannanh.github.io"/>
     <link rel="self" href="https://jiannanh.github.io/atom.xml"/>
@@ -42,20 +42,20 @@ wiki 要记得修饰一下。<a href="https://en.wikipedia.org/wiki/Remote_proce
 <li>双向流和集成身份验证<br>
 以HTTP/2为基础的双向流和插件化认证</li>
 </ol>
-<h2 id="2-restful-和-rpc-这一块最后讲">2. Restful 和 RPC 这一块最后讲</h2>
-<p>RPC是面向过程，RESTful 是面向资源也就是 url，并且使用了 HTTP 操作。从这个维度上看，RESTful风格的 url 在表述的精简性、可读性上都要更好。</p>
-<p>其他的诸如，协议版本，RPC 中的代理序列化等差异。我个人觉得只是实现上的区别。</p>
-<h2 id="为什么要用-rpc-grpc-web">为什么要用 RPC || gRPC-web</h2>
-<p>最开始应用都是单体的应用，开发比较简单，但程序部署比较麻烦。如果有一个环节出了问题，也可以比较快的横向扩展。大的应用之间的通信需要使用rpc进行通信。</p>
-<p>无感知调用<br>
-RPC 可以定制化，可以减少传输过程之中的一些损耗。<br>
-RPC 基于的协议可能是 TCP 或者 UDP 让网络传输更快。</p>
-<p>开发模式的提升，就像是前后端分离的理念细化了分工，提升了效率和代码质量。gRPC-web （或许）能节约对接口的复杂过程。对接多个不同语言代码的后端。所有的语言共一个接口写法。</p>
 <h2 id="rpc-模块-如何搭建一个-rpc">RPC 模块 - 如何搭建一个 RPC</h2>
 <p>通信经过网络，传统的单体应用要通过接口。远程的方法是如何使用的。我也可以把远程的方法变成接口。通过代理技术。在调用的过程中，对方法进行拦截，对参数进行序列化。在序列化的过程中，拿到目标地址。编解码后，传到网络上。目标地址监听网络，拿到数据包进行解码，拿到二进制数据进行反序列化。通过反射执行。通过相反的路传回给调用方。调用方获得结果。<br>
 <img src="https://jiannanh.github.io/post-images/1597113191937.png" alt="" loading="lazy"></p>
 <h2 id="rpc架构">RPC架构</h2>
 <figure data-type="image" tabindex="1"><img src="https://jiannanh.github.io/post-images/1597113273813.png" alt="" loading="lazy"></figure>
+<h2 id="grpc-web-架构">gRPC-web 架构</h2>
+<p><img src="https://jiannanh.github.io/post-images/1597809413017.png" alt="" loading="lazy"><br>
+<img src="https://jiannanh.github.io/post-images/1597809418373.png" alt="" loading="lazy"></p>
+<h2 id="2-restful-和-rpc">2. Restful 和 RPC</h2>
+<p>RPC是面向过程，RESTful 是面向资源也就是 url，并且使用了 HTTP 操作。从这个维度上看，RESTful风格的 url 在表述的精简性、可读性上都要更好。</p>
+<p>其他的诸如，协议版本，RPC 中的代理序列化等差异。我个人觉得只是实现上的区别。</p>
+<h2 id="为什么要用-rpc-grpc-web">为什么要用 RPC || gRPC-web</h2>
+<p>最开始应用都是单体的应用，开发比较简单，但程序部署比较麻烦。如果有一个环节出了问题，也可以比较快的横向扩展。大的应用之间的通信需要使用rpc进行通信。</p>
+<p>开发模式的提升，就像是前后端分离的理念细化了分工，提升了效率和代码质量。gRPC-web （或许）能节约对接口的复杂过程。对接多个不同语言代码的后端。所有的语言共一个接口写法。</p>
 <h2 id="quick-start">Quick start</h2>
 <p>谈了这么多的 RPC-web 的好处，接下来有两个小 case可以快速的感受 RPC-web 的实际效果。</p>
 <p>首先是 gRPC-web 的<a href="https://grpc.io/docs/languages/web/quickstart/">官方demo</a>这个demo 跑起来很方便，但是整个 demo 和 gRPC-web 的其他文件放在了一起，RPC-web 的主要功能反而不好发现。</p>
