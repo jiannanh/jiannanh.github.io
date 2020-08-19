@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" >
 
-<title>RPC | Gridea</title>
+<title>gRPC简介 | Gridea</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://jiannanh.github.io/favicon.ico?v=1597720383410">
+<link rel="shortcut icon" href="https://jiannanh.github.io/favicon.ico?v=1597807564155">
 <link rel="stylesheet" href="https://jiannanh.github.io/styles/main.css">
 
 
@@ -18,10 +18,12 @@
 
 
 
-    <meta name="description" content="RPC 是什么？
-1. RPC是什么
-RPC （Remote Procedure Call) 远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。
-Rpc协议假定默写传输协议的存在，如 TCP 或 UD..." />
+    <meta name="description" content="gRPC简介
+gRPC简介
+想看官方的点上面这个链接，下面是我的翻译，方便大家观看
+gRPC简介 - 我的翻译
+gRPC和协议缓冲区（protocol buffers）简介
+该页面向您介绍gRPC和协议缓冲区。gRPC可以将protocol..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -31,7 +33,7 @@ Rpc协议假定默写传输协议的存在，如 TCP 或 UD..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://jiannanh.github.io">
-        <img src="https://jiannanh.github.io/images/avatar.png?v=1597720383410" class="site-logo">
+        <img src="https://jiannanh.github.io/images/avatar.png?v=1597807564155" class="site-logo">
         <h1 class="site-title">Gridea</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -93,99 +95,26 @@ Rpc协议假定默写传输协议的存在，如 TCP 或 UD..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">RPC</h2>
+            <h2 class="post-title">gRPC简介</h2>
             <div class="post-date">2020-08-11</div>
             
               <div class="feature-container" style="background-image: url('https://jiannanh.github.io/post-images/rpc.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <h1 id="rpc-是什么">RPC 是什么？</h1>
-<h2 id="1-rpc是什么">1. RPC是什么</h2>
-<p>RPC （Remote Procedure Call) 远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。</p>
-<p>Rpc协议假定默写传输协议的存在，如 TCP 或 UDP，为通讯之间携带信息数据。在 OIS 网络通信模型之中， RPC 跨越了传输层和应用层。RPC 使得开发网络分布式多程序在内的应用程序变得更加容易。</p>
-<h2 id="2-restful-和-rpc">2. Restful 和 RPC</h2>
-<p><a href="https://baike.baidu.com/item/RESTful">restful 百度百科</a></p>
-<blockquote>
-<p>RESTFUL 是一种网络应用程序的设计风格和开发方式，基于 HTTP ，可以使用 XML 格式定义或 JSON 格式定义。RESTFUL 适用于移动互联网厂商作为业务使能接口的场景，实现第三方 OTT 调用移动网络资源的功能，动作类型为新增、变更、删除所调用资源。<br>
-其实这两者并不是一个维度的概念，总得来说RPC涉及的维度更广。</p>
-</blockquote>
-<p>如果硬要比较，那么可以从RPC风格的url和Restful风格的url上进行比较。</p>
-<p>比如你提供一个查询订单的接口，用RPC风格，你可能会这样写：</p>
-<pre><code>/queryOrder?orderId=123
-</code></pre>
-<p>用Restful风格呢？</p>
-<pre><code>Get  
-/order?orderId=123
-</code></pre>
-<p>RPC是面向过程，Restful是面向资源，并且使用了Http动词。从这个维度上看，Restful风格的url在表述的精简性、可读性上都要更好。</p>
-<h2 id="rpc没那么简单">RPC没那么简单</h2>
-<p>要实现一个RPC不算难，难的是实现一个高性能高可靠的RPC框架。</p>
-<p>比如，既然是分布式了，那么一个服务可能有多个实例，你在调用时，要如何获取这些实例的地址呢？</p>
-<p>这时候就需要一个服务注册中心，比如在Dubbo里头，就可以使用Zookeeper作为注册中心，在调用时，从Zookeeper获取服务的实例列表，再从中选择一个进行调用。</p>
-<p>那么选哪个调用好呢？这时候就需要负载均衡了，于是你又得考虑如何实现复杂均衡，比如Dubbo就提供了好几种负载均衡策略。</p>
-<p>这还没完，总不能每次调用时都去注册中心查询实例列表吧，这样效率多低呀，于是又有了缓存，有了缓存，就要考虑缓存的更新问题，blablabla......</p>
-<p>你以为就这样结束了，没呢，还有这些：</p>
-<p>客户端总不能每次调用完都干等着服务端返回数据吧，于是就要支持异步调用；<br>
-服务端的接口修改了，老的接口还有人在用，怎么办？总不能让他们都改了吧？这就需要版本控制了；<br>
-服务端总不能每次接到请求都马上启动一个线程去处理吧？于是就需要线程池；<br>
-服务端关闭时，还没处理完的请求怎么办？是直接结束呢，还是等全部请求处理完再关闭呢？<br>
-......<br>
-如此种种，都是一个优秀的RPC框架需要考虑的问题。</p>
-<p>当然，接下来我们还是先实现一个简单的RPC，再在上面一步步优化！</p>
-<h2 id="为什么要用-rpc">为什么要用 RPC</h2>
-<p>最开始应用都是单体的应用，开发比较简单，但程序部署比较麻烦。如果有一个环节出了问题，也可以比较快的横向扩展。大的应用之间的通信需要使用rpc进行通信。</p>
-<p>无感知调用<br>
-RPC 可以定制化，可以减少传输过程之中的一些损耗。<br>
-RPC 基于的协议可能是 TCP 或者 UDP 让网络传输更快。</p>
-<h2 id="rpc模块">RPC模块</h2>
-<p>通信经过网络，传统的单体应用要通过接口。远程的方法是如何使用的。我也可以把远程的方法变成接口。通过代理技术。在调用的过程中，对方法进行拦截，对参数进行序列化。在序列化的过程中，拿到目标地址。编解码后，传到网络上。目标地址监听网络，拿到数据包进行解码，拿到二进制数据进行反序列化。通过反射执行。通过相反的路传回给调用方。调用方获得结果。<br>
-<img src="https://jiannanh.github.io/post-images/1597113191937.png" alt="" loading="lazy"></p>
-<h2 id="rpc架构">RPC架构</h2>
-<figure data-type="image" tabindex="1"><img src="https://jiannanh.github.io/post-images/1597113273813.png" alt="" loading="lazy"></figure>
-<p>协议<br>
-数据流 -&gt; 请求1 请求2 请求3 ... 请求N</p>
-<p>序列化<br>
-JDK，只有JAVA可以用<br>
-JSON，性能有欠缺<br>
-Hessian<br>
-Protobuf</p>
-<p>反序列化<br>
-反序列化安全问题<br>
-白名单：</p>
-<ol>
-<li>扫描接口类声明的类型</li>
-<li>系统内置白名单</li>
-<li>用户定义白名单</li>
-</ol>
-<h2 id="grpc">gRPC</h2>
-<p>高性能，开源通用RPC框架</p>
-<h3 id="为什么选择grpc">为什么选择gRPC？</h3>
-<p>gRPC是可以在任何环境中运行的现代开源高性能RPC框架。它可以通过插件来支持有效地连接数据中心内和跨数据中心的服务，以实现负载平衡，跟踪，运行状况检查和身份验证。它也适用于分布式计算的最后步骤，以将设备，移动应用程序和浏览器连接到后端服务。</p>
-<h3 id="grpc的四个优点">gRPC的四个优点</h3>
-<ol>
-<li>简单的服务定义<br>
-使用 Protocol Buffer 这种强大的二进制序列化工具来定义服务。</li>
-<li>快速启动和扩展<br>
-只需要一行命令即可安装运行时和开发环境。此外，使用此框架每秒可以扩展数百万个 RPC</li>
-<li>跨语言和平台工作<br>
-用你惯用的语言自动地生成client和service</li>
-<li>双向流和集成身份验证<br>
-以HTTP/2为基础的双向流和插件化认证</li>
-</ol>
-<h1 id="grpc简介">gRPC简介</h1>
+              <h1 id="grpc简介">gRPC简介</h1>
 <p><a href="https://grpc.io/docs/what-is-grpc/introduction/">gRPC简介</a><br>
 想看官方的点上面这个链接，下面是我的翻译，方便大家观看</p>
 <h1 id="grpc简介-我的翻译">gRPC简介 - 我的翻译</h1>
-<p><strong>gRPC和协议缓冲区（protocol buffers）简介。</strong><br>
-该页面向您介绍gRPC和协议缓冲区。gRPC可以将协议缓冲区用作其接口定义语言（IDL）和其消息交换格式。如果您不熟悉gRPC和/或协议缓冲区，请阅读本章！如果您只是想深入了解gRPC的实际效果，请参阅<a href="https://grpc.io/docs/quickstart/">“ 快速入门”</a>。</p>
+<p><strong>gRPC和协议缓冲区（protocol buffers）简介</strong><br>
+该页面向您介绍gRPC和协议缓冲区。gRPC可以将protocol buffers用作其接口定义语言（IDL）和其消息交换格式。如果您不熟悉gRPC和/或protocol buffers，请阅读本章！如果您只是想深入了解gRPC的实际效果，请参阅<a href="https://grpc.io/docs/quickstart/">“ 快速入门”</a>。</p>
 <h2 id="总览"><a href="#%E6%80%BB%E8%A7%88">总览</a></h2>
 <p>在gRPC中，客户端应用程序可以直接在其他计算机上的服务器应用程序上调用方法，就好像它是本地对象一样，从而使您更轻松地创建分布式应用程序和服务。与许多RPC系统一样，gRPC围绕定义服​​务的思想，指定可通过其参数和返回类型远程调用的方法。在服务器端server（也有叫做 skeleton），服务器实现此接口并运行gRPC服务器以处理客户端调用。在客户端，客户端具有一个stub（也有称为 client ），提供与服务器相同的方法（可以看成在此保存后端的方法method）。<br>
 <img src="https://jiannanh.github.io/post-images/1597303537698.svg" alt="" loading="lazy"><br>
 从Google内部的服务器到您自己的台式机，gRPC客户端和服务器可以在各种环境中运行并相互通信，并且可以使用gRPC支持的任何语言编写。因此，例如，您可以使用Go，Python或Ruby的客户端轻松地用Java创建gRPC服务器。此外，最新的Google API将具有gRPC版本，可让您轻松地在应用程序中内置Google功能。</p>
 <h2 id="使用协议缓冲区protocol-buffer"><a href="#%E4%BD%BF%E7%94%A8%E5%8D%8F%E8%AE%AE%E7%BC%93%E5%86%B2%E5%8C%BAprotocol-buffer">使用协议缓冲区Protocol Buffer</a></h2>
-<p>默认情况下，gRPC使用 <a href="https://developers.google.com/protocol-buffers/docs/overview">协议缓冲区</a>，这是Google成熟的用于序列化结构化数据的开源机制（尽管它可以与其他数据格式（例如JSON）一起使用）。下面的部分是它的工作原理的快速介绍。如果您已经熟悉协议缓冲区，请随时跳到下一部分。</p>
-<p>使用协议缓冲区的第一步是为要在原始文件中序列化的数据定义结构：这是带有.proto扩展名的普通文本文件。协议缓冲区数据被构造为 消息，其中每个消息都是信息的小逻辑记录，其中包含一系列称为字段的名称/值对。下面一个简单的例子：</p>
+<p>默认情况下，gRPC使用 <a href="https://developers.google.com/protocol-buffers/docs/overview">协议缓冲区 protocol buffers</a>，这是Google成熟的用于序列化结构化数据的开源机制（尽管它可以与其他数据格式（例如JSON）一起使用）。下面的部分是它的工作原理的快速介绍。如果您已经熟悉协议缓冲区，请随时跳到下一部分。</p>
+<p>使用协议缓冲区的第一步是为要在原始文件中序列化的数据定义结构：这是带有.proto扩展名的普通文本文件。协议缓冲区数据被构造为 消息 message，其中每个消息都是信息的逻辑记录，其中包含一系列称为字段的名称/值对。下面一个简单的例子：</p>
 <pre><code class="language-js">message Person {
   string name = 1;
   int32 id = 2;
