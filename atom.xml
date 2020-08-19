@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jiannanh.github.io</id>
     <title>Gridea</title>
-    <updated>2020-08-19T03:59:00.914Z</updated>
+    <updated>2020-08-19T04:03:06.246Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jiannanh.github.io"/>
     <link rel="self" href="https://jiannanh.github.io/atom.xml"/>
@@ -29,8 +29,7 @@ wiki 要记得修饰一下。<a href="https://en.wikipedia.org/wiki/Remote_proce
 <p>到目前为止，这些好处基本上仅适用于移动应用程序和后端开发人员，而前端开发人员则不得不继续依赖JSON REST接口作为其主要的信息交换手段。但是，随着gRPC-Web的发布，gRPC有望成为前端开发人员工具箱中的宝贵补充。<a href="https://grpc.io/blog/state-of-grpc-web/">link</a></p>
 <p>在我看来，gRPC-Web的优点在于，它使您能够从Web客户端一直创建完整的端到端gRPC服务体系结构。以前，如果您想将gRPC驱动的后端与Web客户端结合使用，则需要编写REST API逻辑来与gRPC进行HTTP调用之间的转换-我们大多数人都愿意避免的工作。gRPC-Web使您能够直接使用协议缓冲区封装所有数据接口，从而使您不必再编写其他HTTP服务器。<a href="https://blog.envoyproxy.io/envoy-and-grpc-web-a-fresh-new-alternative-to-rest-6504ce7eb880">link</a></p>
 <p>还将获得使用协议缓冲区的所有优点，包括高效的序列化，简单的IDL和轻松的接口更新。gRPC-Web使您可以使用惯用的API从浏览器访问以这种方式构建的gRPC服务。</p>
-<pre><code>使用gRPC，您可以在.proto文件中一次定义服务，并以gRPC支持的任何语言来实现客户端和服务器，而这些语言又可以在从大型数据中心内的服务器到您自己的平板电脑的环境中运行-这一切的复杂性gRPC为您处理不同语言和环境之间的通信。您还将获得使用协议缓冲区的所有优点，包括高效的序列化，简单的IDL和轻松的接口更新。gRPC-Web使您可以使用惯用的API从浏览器访问以这种方式构建的gRPC服务。
-</code></pre>
+<p>使用gRPC，您可以在.proto文件中一次定义服务，并以gRPC支持的任何语言来实现客户端和服务器，而这些语言又可以在从大型数据中心内的服务器到您自己的平板电脑的环境中运行-这一切的复杂性gRPC为您处理不同语言和环境之间的通信。您还将获得使用协议缓冲区的所有优点，包括高效的序列化，简单的IDL和轻松的接口更新。gRPC-Web使您可以使用惯用的API从浏览器访问以这种方式构建的gRPC服务。</p>
 <h3 id="grpc的四个优点">gRPC的四个优点</h3>
 <ol>
 <li>简单的服务定义<br>
