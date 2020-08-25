@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jiannanh.github.io</id>
     <title>Jiannan</title>
-    <updated>2020-08-19T04:06:22.750Z</updated>
+    <updated>2020-08-25T12:54:24.769Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jiannanh.github.io"/>
     <link rel="self" href="https://jiannanh.github.io/atom.xml"/>
@@ -21,15 +21,14 @@
 <blockquote>
 <p>在分布式计算中，远程过程调用（RPC）是指计算机程序使过程（子例程）在不同的地址空间（通常在共享网络的另一台计算机上）执行时，远程的过程就像是普通的（本地）调用，而无需程序员为远程过程写过多的代码。即，无论子例程是正在执行的程序是本地程序还是远程程序，程序员都编写基本相同的代码。这是客户端-服务器交互的一种形式（客户端调用，服务器执行），通常是通过请求-响应消息传递系统来实现的。在面向对象的编程语言（JAVA）中，RPC由远程方法调用表示（RMI）。RPC模型意味着一定程度的位置透明性，即无论本地还是远程，调用过程在很大程度上是相同的，但是实质上它们并不相同，（感受上很像是在本地，但是实际上是在远程调用）因此可以将本地调用与远程调用区分开。<br>
 远程呼叫通常比本地呼叫慢几个数量级，并且可靠性较差，因此区分它们很重要。（但是实际应用中，前后端是分离的，这样的比较对rpc来说并不公平）<br>
-wiki 要记得修饰一下。<a href="https://en.wikipedia.org/wiki/Remote_procedure_call">Remote procedure call</a></p>
+<a href="https://en.wikipedia.org/wiki/Remote_procedure_call">Remote procedure call</a></p>
 </blockquote>
 <p>从上面的 Wiki 中可以看出 RPC 更多像是一种概念。目前，RPC 这种概念已经被许多不同的（通常是不兼容的）技术已被用来实现。包括gRPC。</p>
 <h3 id="为什么选择grpc-web">为什么选择gRPC-web？</h3>
 <p>gRPC是可以在任何环境中运行的现代开源高性能RPC框架。它可以通过插件来支持有效地连接数据中心内和跨数据中心的服务，以实现负载平衡，跟踪，运行状况检查和身份验证。它也适用于分布式计算的最后步骤，以将设备，移动应用程序和浏览器连接到后端服务。</p>
 <p>到目前为止，这些好处基本上仅适用于移动应用程序和后端开发人员，而前端开发人员则不得不继续依赖JSON REST接口作为其主要的信息交换手段。但是，随着gRPC-Web的发布，gRPC有望成为前端开发人员工具箱中的宝贵补充。<a href="https://grpc.io/blog/state-of-grpc-web/">link</a></p>
-<p>在我看来，gRPC-Web的优点在于，它使您能够从Web客户端一直创建完整的端到端gRPC服务体系结构。以前，如果您想将gRPC驱动的后端与Web客户端结合使用，则需要编写REST API逻辑来与gRPC进行HTTP调用之间的转换-我们大多数人都愿意避免的工作。gRPC-Web使您能够直接使用协议缓冲区封装所有数据接口，从而使您不必再编写其他HTTP服务器。<a href="https://blog.envoyproxy.io/envoy-and-grpc-web-a-fresh-new-alternative-to-rest-6504ce7eb880">link</a></p>
+<p>在我看来，gRPC-Web的优点在于，它使您能够从Web客户端一直创建完整的端到端gRPC服务体系结构。您只需要在.proto文件中一次定义服务。以前，如果您想将gRPC驱动的后端与Web客户端结合使用，则需要编写REST API逻辑来与gRPC进行HTTP调用之间的转换-我们大多数人都愿意避免的工作。gRPC-Web使您能够直接使用协议缓冲区封装所有数据接口，从而使您不必再编写其他HTTP服务器。<a href="https://blog.envoyproxy.io/envoy-and-grpc-web-a-fresh-new-alternative-to-rest-6504ce7eb880">link</a></p>
 <p>还将获得使用协议缓冲区的所有优点，包括高效的序列化，简单的IDL和轻松的接口更新。gRPC-Web使您可以使用惯用的API从浏览器访问以这种方式构建的gRPC服务。</p>
-<p>使用gRPC，您可以在.proto文件中一次定义服务，并以gRPC支持的任何语言来实现客户端和服务器，而这些语言又可以在从大型数据中心内的服务器到您自己的平板电脑的环境中运行-这一切的复杂性gRPC为您处理不同语言和环境之间的通信。您还将获得使用协议缓冲区的所有优点，包括高效的序列化，简单的IDL和轻松的接口更新。gRPC-Web使您可以使用惯用的API从浏览器访问以这种方式构建的gRPC服务。</p>
 <h3 id="grpc的四个优点">gRPC的四个优点</h3>
 <ol>
 <li>简单的服务定义<br>
@@ -265,12 +264,397 @@ static_resources:
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[leetcode - Array]]></title>
+        <id>https://jiannanh.github.io/post/leetcode-array/</id>
+        <link href="https://jiannanh.github.io/post/leetcode-array/">
+        </link>
+        <updated>2020-08-12T08:26:56.000Z</updated>
+        <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>我的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>27</td>
+<td><a href="#remove-element">Remove Element</a></td>
+</tr>
+<tr>
+<td>134</td>
+<td><a href="#gas-station">Gas Station </a></td>
+</tr>
+<tr>
+<td>118</td>
+<td><a href="#pascals-triangle">Pascal's Triangle</a></td>
+</tr>
+<tr>
+<td>119</td>
+<td><a href="#pascals-triangle-ii">Pascal's Triangle II</a></td>
+</tr>
+<tr>
+<td>169</td>
+<td><a href="#majority-element">Majority Element</a></td>
+</tr>
+<tr>
+<td>274</td>
+<td><a href="#h-index">H-Index</a></td>
+</tr>
+<tr>
+<td>275</td>
+<td><a href="#h-index-ii">H-Index II</a></td>
+</tr>
+<tr>
+<td>243</td>
+<td><a href="#shortest-word-distance">Shortest Word Distance</a></td>
+</tr>
+<tr>
+<td>244</td>
+<td><a href="#shortest-word-distance-ii">Shortest Word Distance II</a></td>
+</tr>
+<tr>
+<td>245</td>
+<td><a href="#shortest-word-distance-iii">Shortest Word Distance III</a></td>
+</tr>
+<tr>
+<td>217</td>
+<td><a href="#contains-duplicate">Contains Duplicate</a></td>
+</tr>
+<tr>
+<td>219</td>
+<td><a href="#contains-duplicate-ii">Contains Duplicate II </a></td>
+</tr>
+<tr>
+<td>220</td>
+<td><a href="#contains-duplicate-iii">Contains Duplicate III </a></td>
+</tr>
+<tr>
+<td>55</td>
+<td><a href="#jump-game">Jump Game</a></td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remove-element">Remove Element</h2>
+<p><a href="https://leetcode.com/problems/remove-element/">27 Remove Element </a></p>
+<pre><code class="language-java">class Solution {
+    public int removeElement(int[] nums, int val) {
+        int res = 0;
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (nums[i] != val) {
+                nums[res++] = nums[i];
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="gas-station">Gas Station</h2>
+<p>There are N gas stations along a circular route, where the amount of gas at station i is gas[i].</p>
+<p>You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations.</p>
+<p>Return the starting gas station's index if you can travel around the circuit once in the clockwise direction, otherwise return -1.<br>
+<a href="https://leetcode.com/problems/gas-station/">134. Gas Station </a></p>
+<pre><code class="language-java">class Solution {
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int sum = 0;
+        int start = 0;
+        for (int i = 0; i &lt; gas.length; i++) {
+            sum += gas[i] - cost[i];
+        }
+        if (sum &lt; 0) {
+            return -1;
+        } else {
+            sum = 0;
+            for (int i = 0; i &lt; gas.length; i++) {
+                if (sum &lt; 0) {
+                    start = i;
+                    sum = gas[i] - cost[i];
+                } else  {
+                    sum += gas[i] - cost[i];
+                }
+            }
+        }
+        return start;
+    }
+}
+</code></pre>
+<h2 id="pascals-triangle">Pascal's Triangle</h2>
+<p><a href="https://leetcode.com/problems/pascals-triangle/description/">118. Pascal's Triangle</a></p>
+<pre><code class="language-java">class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; generate(int numRows) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; numRows; i++) {
+            list.add(0, 1);
+            for (int j = 1; j &lt; list.size() - 1; j++) {
+                list.set(j, list.get(j) + list.get(j + 1));
+            }
+            res.add(new ArrayList&lt;&gt;(list));
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="pascals-triangle-ii">Pascal's Triangle II</h2>
+<p><a href="https://leetcode.com/problems/pascals-triangle-ii/description/">119. Pascal's Triangle II</a></p>
+<pre><code class="language-java">class Solution {
+    public List&lt;Integer&gt; getRow(int rowIndex) {
+        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt;= rowIndex; i++) {
+            list.add(0, 1);
+            for (int j = 1; j &lt; list.size() - 1; j++) {
+                list.set(j, list.get(j) + list.get(j + 1));
+            }
+        }
+        return list;
+    }
+}
+</code></pre>
+<h2 id="majority-element">Majority Element</h2>
+<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.<br>
+<a href="https://leetcode.com/problems/majority-element/">169. Majority Element</a></p>
+<pre><code class="language-java">class Solution {
+    public int majorityElement(int[] nums) {
+        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                map.put(nums[i], map.get(nums[i]) + 1);
+            } else {
+                map.put(nums[i], 1);
+            }
+        }
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (map.get(nums[i]) &gt; nums.length/2) {
+                return nums[i];
+            }
+        }
+        return -1;
+    }
+}
+</code></pre>
+<h2 id="majority-element-2">Majority Element</h2>
+<p>Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.</p>
+<p>Note: The algorithm should run in linear time and in O(1) space.<br>
+<a href="https://leetcode.com/problems/majority-element-ii/">229. Majority Element II</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="h-index">H-Index</h2>
+<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.<br>
+<a href="https://leetcode.com/problems/h-index/description/">274. H-Index</a></p>
+<pre><code class="language-java">class Solution {
+    public int hIndex(int[] citations) {
+        Arrays.sort(citations);
+        int res = 0;
+        for (int i = 0; i &lt; citations.length; i++) {
+            if (citations[citations.length - i - 1] &gt; i) {
+                res++;
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="h-index-ii">H-Index II</h2>
+<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.<br>
+<a href="https://leetcode.com/problems/h-index-ii/description/">275. H-Index II</a></p>
+<pre><code class="language-java">class Solution {
+    public int hIndex(int[] citations) {
+        int res = 0;
+        for (int i = 0; i &lt; citations.length; i++) {
+            if (citations[citations.length - i - 1] &gt; i) {
+                res++;
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="shortest-word-distance">Shortest Word Distance</h2>
+<p>Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.</p>
+<p>Example:</p>
+<pre><code>Assume that words = [&quot;practice&quot;, &quot;makes&quot;, &quot;perfect&quot;, &quot;coding&quot;, &quot;makes&quot;].
+
+Input: word1 = “coding”, word2 = “practice”
+Output: 3
+Input: word1 = &quot;makes&quot;, word2 = &quot;coding&quot;
+Output: 1
+</code></pre>
+<p>Note:<br>
+You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.<br>
+<a href="https://leetcode.com/problems/shortest-word-distance/">243. Shortest Word Distance</a></p>
+<pre><code class="language-java">class Solution {
+    public int shortestDistance(String[] words, String word1, String word2) {
+        int res = Integer.MAX_VALUE;
+        int count1 = -1, count2 = -1;
+        for (int i = 0; i &lt; words.length; i++) {
+            if (words[i].equals(word1)) {
+                count1 = i;
+                if (count2 != -1) {
+                    res = Math.min(count1 - count2, res);
+                }
+            }
+            if (words[i].equals(word2)) {
+                count2 = i;
+                if (count1 != -1) {
+                    res = Math.min(count2 - count1, res);
+                }
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="shortest-word-distance-ii">Shortest Word Distance II</h2>
+<p>Design a class which receives a list of words in the constructor, and implements a method that takes two words word1 and word2 and return the shortest distance between these two words in the list. Your method will be called repeatedly many times with different parameters.</p>
+<p>Example:</p>
+<pre><code>Assume that words = [&quot;practice&quot;, &quot;makes&quot;, &quot;perfect&quot;, &quot;coding&quot;, &quot;makes&quot;].
+
+Input: word1 = “coding”, word2 = “practice”
+Output: 3
+Input: word1 = &quot;makes&quot;, word2 = &quot;coding&quot;
+Output: 1
+</code></pre>
+<p>Note:<br>
+You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.<br>
+<a href="https://leetcode.com/problems/shortest-word-distance-ii/description/"> 244. Shortest Word Distance II </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="shortest-word-distance-iii">Shortest Word Distance III</h2>
+<p>Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.</p>
+<p>word1 and word2 may be the same and they represent two individual words in the list.</p>
+<p>Example:</p>
+<pre><code>Assume that words = [&quot;practice&quot;, &quot;makes&quot;, &quot;perfect&quot;, &quot;coding&quot;, &quot;makes&quot;].
+
+Input: word1 = “makes”, word2 = “coding”
+Output: 1
+Input: word1 = &quot;makes&quot;, word2 = &quot;makes&quot;
+Output: 3
+</code></pre>
+<p>Note:<br>
+You may assume word1 and word2 are both in the list.</p>
+<p><a href="https://leetcode.com/problems/shortest-word-distance-iii/"> 245. Shortest Word Distance III </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="contains-duplicate">Contains Duplicate</h2>
+<p>Given an array of integers, find if the array contains any duplicates.</p>
+<p>Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.<br>
+Example:</p>
+<pre><code>Example 1:
+
+Input: [1,2,3,1]
+Output: true
+Example 2:
+
+Input: [1,2,3,4]
+Output: false
+Example 3:
+
+Input: [1,1,1,3,3,4,3,2,4,2]
+Output: true
+</code></pre>
+<p><a href="">  </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="contains-duplicate-ii">Contains Duplicate II</h2>
+<p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.</p>
+<p>Example:</p>
+<pre><code>Example 1:
+
+Input: nums = [1,2,3,1], k = 3
+Output: true
+Example 2:
+
+Input: nums = [1,0,1,1], k = 1
+Output: true
+Example 3:
+
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+</code></pre>
+<p><a href="https://leetcode.com/problems/contains-duplicate-ii/description/"> 219. Contains Duplicate II </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="contains-duplicate-ii-2">Contains Duplicate II</h2>
+<p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.</p>
+<p>Example:</p>
+<pre><code>Example 1:
+
+Input: nums = [1,2,3,1], k = 3
+Output: true
+Example 2:
+
+Input: nums = [1,0,1,1], k = 1
+Output: true
+Example 3:
+
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+</code></pre>
+<p><a href="https://leetcode.com/problems/contains-duplicate-ii/"> 219. Contains Duplicate II </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="contains-duplicate-iii">Contains Duplicate III</h2>
+<p>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.</p>
+<p>Example:</p>
+<pre><code>Example 1:
+
+Input: nums = [1,2,3,1], k = 3
+Output: true
+Example 2:
+
+Input: nums = [1,0,1,1], k = 1
+Output: true
+Example 3:
+
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+</code></pre>
+<p><a href="https://leetcode.com/problems/contains-duplicate-iii/"> 219. Contains Duplicate III </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="jump-game">Jump Game</h2>
+<p>Given an array of non-negative integers, you are initially positioned at the first index of the array.</p>
+<p>Each element in the array represents your maximum jump length at that position.</p>
+<p>Determine if you are able to reach the last index.<br>
+Example:</p>
+<pre><code>Example 1:
+
+Input: nums = [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+Example 2:
+
+Input: nums = [3,2,1,0,4]
+Output: false
+Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
+</code></pre>
+<p><a href="">  </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id=""></h2>
+<p>Example:</p>
+<pre><code>
+</code></pre>
+<p><a href="">  </a></p>
+<pre><code class="language-java">
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[leetcode目录页面]]></title>
         <id>https://jiannanh.github.io/post/leetcode-mu-lu-ye-mian/</id>
         <link href="https://jiannanh.github.io/post/leetcode-mu-lu-ye-mian/">
         </link>
         <updated>2020-08-12T08:21:41.000Z</updated>
         <content type="html"><![CDATA[<p>跳转到相应的专题<br>
+大类 小类 难度<br>
 <a href="">Array</a><br>
 String<br>
 Math<br>

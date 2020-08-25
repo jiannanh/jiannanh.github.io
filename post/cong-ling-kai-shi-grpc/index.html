@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://jiannanh.github.io/favicon.ico?v=1597809975893">
+<link rel="shortcut icon" href="https://jiannanh.github.io/favicon.ico?v=1598360062179">
 <link rel="stylesheet" href="https://jiannanh.github.io/styles/main.css">
 
 
@@ -31,7 +31,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://jiannanh.github.io">
-        <img src="https://jiannanh.github.io/images/avatar.png?v=1597809975893" class="site-logo">
+        <img src="https://jiannanh.github.io/images/avatar.png?v=1598360062179" class="site-logo">
         <h1 class="site-title">Jiannan</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -105,15 +105,14 @@
 <blockquote>
 <p>在分布式计算中，远程过程调用（RPC）是指计算机程序使过程（子例程）在不同的地址空间（通常在共享网络的另一台计算机上）执行时，远程的过程就像是普通的（本地）调用，而无需程序员为远程过程写过多的代码。即，无论子例程是正在执行的程序是本地程序还是远程程序，程序员都编写基本相同的代码。这是客户端-服务器交互的一种形式（客户端调用，服务器执行），通常是通过请求-响应消息传递系统来实现的。在面向对象的编程语言（JAVA）中，RPC由远程方法调用表示（RMI）。RPC模型意味着一定程度的位置透明性，即无论本地还是远程，调用过程在很大程度上是相同的，但是实质上它们并不相同，（感受上很像是在本地，但是实际上是在远程调用）因此可以将本地调用与远程调用区分开。<br>
 远程呼叫通常比本地呼叫慢几个数量级，并且可靠性较差，因此区分它们很重要。（但是实际应用中，前后端是分离的，这样的比较对rpc来说并不公平）<br>
-wiki 要记得修饰一下。<a href="https://en.wikipedia.org/wiki/Remote_procedure_call">Remote procedure call</a></p>
+<a href="https://en.wikipedia.org/wiki/Remote_procedure_call">Remote procedure call</a></p>
 </blockquote>
 <p>从上面的 Wiki 中可以看出 RPC 更多像是一种概念。目前，RPC 这种概念已经被许多不同的（通常是不兼容的）技术已被用来实现。包括gRPC。</p>
 <h3 id="为什么选择grpc-web">为什么选择gRPC-web？</h3>
 <p>gRPC是可以在任何环境中运行的现代开源高性能RPC框架。它可以通过插件来支持有效地连接数据中心内和跨数据中心的服务，以实现负载平衡，跟踪，运行状况检查和身份验证。它也适用于分布式计算的最后步骤，以将设备，移动应用程序和浏览器连接到后端服务。</p>
 <p>到目前为止，这些好处基本上仅适用于移动应用程序和后端开发人员，而前端开发人员则不得不继续依赖JSON REST接口作为其主要的信息交换手段。但是，随着gRPC-Web的发布，gRPC有望成为前端开发人员工具箱中的宝贵补充。<a href="https://grpc.io/blog/state-of-grpc-web/">link</a></p>
-<p>在我看来，gRPC-Web的优点在于，它使您能够从Web客户端一直创建完整的端到端gRPC服务体系结构。以前，如果您想将gRPC驱动的后端与Web客户端结合使用，则需要编写REST API逻辑来与gRPC进行HTTP调用之间的转换-我们大多数人都愿意避免的工作。gRPC-Web使您能够直接使用协议缓冲区封装所有数据接口，从而使您不必再编写其他HTTP服务器。<a href="https://blog.envoyproxy.io/envoy-and-grpc-web-a-fresh-new-alternative-to-rest-6504ce7eb880">link</a></p>
+<p>在我看来，gRPC-Web的优点在于，它使您能够从Web客户端一直创建完整的端到端gRPC服务体系结构。您只需要在.proto文件中一次定义服务。以前，如果您想将gRPC驱动的后端与Web客户端结合使用，则需要编写REST API逻辑来与gRPC进行HTTP调用之间的转换-我们大多数人都愿意避免的工作。gRPC-Web使您能够直接使用协议缓冲区封装所有数据接口，从而使您不必再编写其他HTTP服务器。<a href="https://blog.envoyproxy.io/envoy-and-grpc-web-a-fresh-new-alternative-to-rest-6504ce7eb880">link</a></p>
 <p>还将获得使用协议缓冲区的所有优点，包括高效的序列化，简单的IDL和轻松的接口更新。gRPC-Web使您可以使用惯用的API从浏览器访问以这种方式构建的gRPC服务。</p>
-<p>使用gRPC，您可以在.proto文件中一次定义服务，并以gRPC支持的任何语言来实现客户端和服务器，而这些语言又可以在从大型数据中心内的服务器到您自己的平板电脑的环境中运行-这一切的复杂性gRPC为您处理不同语言和环境之间的通信。您还将获得使用协议缓冲区的所有优点，包括高效的序列化，简单的IDL和轻松的接口更新。gRPC-Web使您可以使用惯用的API从浏览器访问以这种方式构建的gRPC服务。</p>
 <h3 id="grpc的四个优点">gRPC的四个优点</h3>
 <ol>
 <li>简单的服务定义<br>
@@ -352,9 +351,9 @@ static_resources:
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://jiannanh.github.io/post/leetcode-mu-lu-ye-mian/">
+                <a href="https://jiannanh.github.io/post/leetcode-array/">
                   <h3 class="post-title">
-                    leetcode目录页面
+                    leetcode - Array
                   </h3>
                 </a>
               </div>

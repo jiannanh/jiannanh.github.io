@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>leetcode - Array | Jiannan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jiannanh.github.io/favicon.ico?v=1598360062179">
+<link rel="stylesheet" href="https://jiannanh.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+
+
+题号
+我的代码
+
+
+
+
+27
+Remove Element
+
+
+134
+Gas Station 
+
+
+118
+Pascal's Triangle
+
+
+119
+Pascal's Triangle II
+
+
+169
+Majority El..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jiannanh.github.io">
+        <img src="https://jiannanh.github.io/images/avatar.png?v=1598360062179" class="site-logo">
+        <h1 class="site-title">Jiannan</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://jiannanh.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">leetcode - Array</h2>
+            <div class="post-date">2020-08-12</div>
+            
+            <div class="post-content" v-pre>
+              <table>
+<thead>
+<tr>
+<th>题号</th>
+<th>我的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>27</td>
+<td><a href="#remove-element">Remove Element</a></td>
+</tr>
+<tr>
+<td>134</td>
+<td><a href="#gas-station">Gas Station </a></td>
+</tr>
+<tr>
+<td>118</td>
+<td><a href="#pascals-triangle">Pascal's Triangle</a></td>
+</tr>
+<tr>
+<td>119</td>
+<td><a href="#pascals-triangle-ii">Pascal's Triangle II</a></td>
+</tr>
+<tr>
+<td>169</td>
+<td><a href="#majority-element">Majority Element</a></td>
+</tr>
+<tr>
+<td>274</td>
+<td><a href="#h-index">H-Index</a></td>
+</tr>
+<tr>
+<td>275</td>
+<td><a href="#h-index-ii">H-Index II</a></td>
+</tr>
+<tr>
+<td>243</td>
+<td><a href="#shortest-word-distance">Shortest Word Distance</a></td>
+</tr>
+<tr>
+<td>244</td>
+<td><a href="#shortest-word-distance-ii">Shortest Word Distance II</a></td>
+</tr>
+<tr>
+<td>245</td>
+<td><a href="#shortest-word-distance-iii">Shortest Word Distance III</a></td>
+</tr>
+<tr>
+<td>217</td>
+<td><a href="#contains-duplicate">Contains Duplicate</a></td>
+</tr>
+<tr>
+<td>219</td>
+<td><a href="#contains-duplicate-ii">Contains Duplicate II </a></td>
+</tr>
+<tr>
+<td>220</td>
+<td><a href="#contains-duplicate-iii">Contains Duplicate III </a></td>
+</tr>
+<tr>
+<td>55</td>
+<td><a href="#jump-game">Jump Game</a></td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remove-element">Remove Element</h2>
+<p><a href="https://leetcode.com/problems/remove-element/">27 Remove Element </a></p>
+<pre><code class="language-java">class Solution {
+    public int removeElement(int[] nums, int val) {
+        int res = 0;
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (nums[i] != val) {
+                nums[res++] = nums[i];
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="gas-station">Gas Station</h2>
+<p>There are N gas stations along a circular route, where the amount of gas at station i is gas[i].</p>
+<p>You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations.</p>
+<p>Return the starting gas station's index if you can travel around the circuit once in the clockwise direction, otherwise return -1.<br>
+<a href="https://leetcode.com/problems/gas-station/">134. Gas Station </a></p>
+<pre><code class="language-java">class Solution {
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int sum = 0;
+        int start = 0;
+        for (int i = 0; i &lt; gas.length; i++) {
+            sum += gas[i] - cost[i];
+        }
+        if (sum &lt; 0) {
+            return -1;
+        } else {
+            sum = 0;
+            for (int i = 0; i &lt; gas.length; i++) {
+                if (sum &lt; 0) {
+                    start = i;
+                    sum = gas[i] - cost[i];
+                } else  {
+                    sum += gas[i] - cost[i];
+                }
+            }
+        }
+        return start;
+    }
+}
+</code></pre>
+<h2 id="pascals-triangle">Pascal's Triangle</h2>
+<p><a href="https://leetcode.com/problems/pascals-triangle/description/">118. Pascal's Triangle</a></p>
+<pre><code class="language-java">class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; generate(int numRows) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; numRows; i++) {
+            list.add(0, 1);
+            for (int j = 1; j &lt; list.size() - 1; j++) {
+                list.set(j, list.get(j) + list.get(j + 1));
+            }
+            res.add(new ArrayList&lt;&gt;(list));
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="pascals-triangle-ii">Pascal's Triangle II</h2>
+<p><a href="https://leetcode.com/problems/pascals-triangle-ii/description/">119. Pascal's Triangle II</a></p>
+<pre><code class="language-java">class Solution {
+    public List&lt;Integer&gt; getRow(int rowIndex) {
+        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt;= rowIndex; i++) {
+            list.add(0, 1);
+            for (int j = 1; j &lt; list.size() - 1; j++) {
+                list.set(j, list.get(j) + list.get(j + 1));
+            }
+        }
+        return list;
+    }
+}
+</code></pre>
+<h2 id="majority-element">Majority Element</h2>
+<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.<br>
+<a href="https://leetcode.com/problems/majority-element/">169. Majority Element</a></p>
+<pre><code class="language-java">class Solution {
+    public int majorityElement(int[] nums) {
+        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                map.put(nums[i], map.get(nums[i]) + 1);
+            } else {
+                map.put(nums[i], 1);
+            }
+        }
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (map.get(nums[i]) &gt; nums.length/2) {
+                return nums[i];
+            }
+        }
+        return -1;
+    }
+}
+</code></pre>
+<h2 id="majority-element-2">Majority Element</h2>
+<p>Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.</p>
+<p>Note: The algorithm should run in linear time and in O(1) space.<br>
+<a href="https://leetcode.com/problems/majority-element-ii/">229. Majority Element II</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="h-index">H-Index</h2>
+<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.<br>
+<a href="https://leetcode.com/problems/h-index/description/">274. H-Index</a></p>
+<pre><code class="language-java">class Solution {
+    public int hIndex(int[] citations) {
+        Arrays.sort(citations);
+        int res = 0;
+        for (int i = 0; i &lt; citations.length; i++) {
+            if (citations[citations.length - i - 1] &gt; i) {
+                res++;
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="h-index-ii">H-Index II</h2>
+<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.<br>
+<a href="https://leetcode.com/problems/h-index-ii/description/">275. H-Index II</a></p>
+<pre><code class="language-java">class Solution {
+    public int hIndex(int[] citations) {
+        int res = 0;
+        for (int i = 0; i &lt; citations.length; i++) {
+            if (citations[citations.length - i - 1] &gt; i) {
+                res++;
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="shortest-word-distance">Shortest Word Distance</h2>
+<p>Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.</p>
+<p>Example:</p>
+<pre><code>Assume that words = [&quot;practice&quot;, &quot;makes&quot;, &quot;perfect&quot;, &quot;coding&quot;, &quot;makes&quot;].
+
+Input: word1 = “coding”, word2 = “practice”
+Output: 3
+Input: word1 = &quot;makes&quot;, word2 = &quot;coding&quot;
+Output: 1
+</code></pre>
+<p>Note:<br>
+You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.<br>
+<a href="https://leetcode.com/problems/shortest-word-distance/">243. Shortest Word Distance</a></p>
+<pre><code class="language-java">class Solution {
+    public int shortestDistance(String[] words, String word1, String word2) {
+        int res = Integer.MAX_VALUE;
+        int count1 = -1, count2 = -1;
+        for (int i = 0; i &lt; words.length; i++) {
+            if (words[i].equals(word1)) {
+                count1 = i;
+                if (count2 != -1) {
+                    res = Math.min(count1 - count2, res);
+                }
+            }
+            if (words[i].equals(word2)) {
+                count2 = i;
+                if (count1 != -1) {
+                    res = Math.min(count2 - count1, res);
+                }
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="shortest-word-distance-ii">Shortest Word Distance II</h2>
+<p>Design a class which receives a list of words in the constructor, and implements a method that takes two words word1 and word2 and return the shortest distance between these two words in the list. Your method will be called repeatedly many times with different parameters.</p>
+<p>Example:</p>
+<pre><code>Assume that words = [&quot;practice&quot;, &quot;makes&quot;, &quot;perfect&quot;, &quot;coding&quot;, &quot;makes&quot;].
+
+Input: word1 = “coding”, word2 = “practice”
+Output: 3
+Input: word1 = &quot;makes&quot;, word2 = &quot;coding&quot;
+Output: 1
+</code></pre>
+<p>Note:<br>
+You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.<br>
+<a href="https://leetcode.com/problems/shortest-word-distance-ii/description/"> 244. Shortest Word Distance II </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="shortest-word-distance-iii">Shortest Word Distance III</h2>
+<p>Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.</p>
+<p>word1 and word2 may be the same and they represent two individual words in the list.</p>
+<p>Example:</p>
+<pre><code>Assume that words = [&quot;practice&quot;, &quot;makes&quot;, &quot;perfect&quot;, &quot;coding&quot;, &quot;makes&quot;].
+
+Input: word1 = “makes”, word2 = “coding”
+Output: 1
+Input: word1 = &quot;makes&quot;, word2 = &quot;makes&quot;
+Output: 3
+</code></pre>
+<p>Note:<br>
+You may assume word1 and word2 are both in the list.</p>
+<p><a href="https://leetcode.com/problems/shortest-word-distance-iii/"> 245. Shortest Word Distance III </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="contains-duplicate">Contains Duplicate</h2>
+<p>Given an array of integers, find if the array contains any duplicates.</p>
+<p>Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.<br>
+Example:</p>
+<pre><code>Example 1:
+
+Input: [1,2,3,1]
+Output: true
+Example 2:
+
+Input: [1,2,3,4]
+Output: false
+Example 3:
+
+Input: [1,1,1,3,3,4,3,2,4,2]
+Output: true
+</code></pre>
+<p><a href="">  </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="contains-duplicate-ii">Contains Duplicate II</h2>
+<p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.</p>
+<p>Example:</p>
+<pre><code>Example 1:
+
+Input: nums = [1,2,3,1], k = 3
+Output: true
+Example 2:
+
+Input: nums = [1,0,1,1], k = 1
+Output: true
+Example 3:
+
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+</code></pre>
+<p><a href="https://leetcode.com/problems/contains-duplicate-ii/description/"> 219. Contains Duplicate II </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="contains-duplicate-ii-2">Contains Duplicate II</h2>
+<p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.</p>
+<p>Example:</p>
+<pre><code>Example 1:
+
+Input: nums = [1,2,3,1], k = 3
+Output: true
+Example 2:
+
+Input: nums = [1,0,1,1], k = 1
+Output: true
+Example 3:
+
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+</code></pre>
+<p><a href="https://leetcode.com/problems/contains-duplicate-ii/"> 219. Contains Duplicate II </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="contains-duplicate-iii">Contains Duplicate III</h2>
+<p>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.</p>
+<p>Example:</p>
+<pre><code>Example 1:
+
+Input: nums = [1,2,3,1], k = 3
+Output: true
+Example 2:
+
+Input: nums = [1,0,1,1], k = 1
+Output: true
+Example 3:
+
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+</code></pre>
+<p><a href="https://leetcode.com/problems/contains-duplicate-iii/"> 219. Contains Duplicate III </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="jump-game">Jump Game</h2>
+<p>Given an array of non-negative integers, you are initially positioned at the first index of the array.</p>
+<p>Each element in the array represents your maximum jump length at that position.</p>
+<p>Determine if you are able to reach the last index.<br>
+Example:</p>
+<pre><code>Example 1:
+
+Input: nums = [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+Example 2:
+
+Input: nums = [3,2,1,0,4]
+Output: false
+Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
+</code></pre>
+<p><a href="">  </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id=""></h2>
+<p>Example:</p>
+<pre><code>
+</code></pre>
+<p><a href="">  </a></p>
+<pre><code class="language-java">
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jiannanh.github.io/post/leetcode-mu-lu-ye-mian/">
+                  <h3 class="post-title">
+                    leetcode目录页面
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
