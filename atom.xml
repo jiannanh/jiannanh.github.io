@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jiannanh.github.io</id>
     <title>Jiannan</title>
-    <updated>2020-08-27T12:29:52.037Z</updated>
+    <updated>2020-08-30T08:52:13.575Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jiannanh.github.io"/>
     <link rel="self" href="https://jiannanh.github.io/atom.xml"/>
@@ -10,6 +10,419 @@
     <logo>https://jiannanh.github.io/images/avatar.png</logo>
     <icon>https://jiannanh.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jiannan</rights>
+    <entry>
+        <title type="html"><![CDATA[leetcode -string 1]]></title>
+        <id>https://jiannanh.github.io/post/leetcode-string-1/</id>
+        <link href="https://jiannanh.github.io/post/leetcode-string-1/">
+        </link>
+        <updated>2020-08-30T08:49:35.000Z</updated>
+        <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>我的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28</td>
+<td><a href="#"> Implement strStr()</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="#">Longest Common Prefix </a></td>
+</tr>
+<tr>
+<td>58</td>
+<td><a href="#"> Length of Last Word</a></td>
+</tr>
+<tr>
+<td>387</td>
+<td><a href="#">First Unique Character in a String </a></td>
+</tr>
+<tr>
+<td>383</td>
+<td><a href="#">	Ransom Note </a></td>
+</tr>
+<tr>
+<td>344</td>
+<td><a href="#">Reverse String </a></td>
+</tr>
+<tr>
+<td>151</td>
+<td><a href="#"> Reverse Words in a String</a></td>
+</tr>
+<tr>
+<td>186</td>
+<td><a href="#">Reverse Words in a String II </a></td>
+</tr>
+<tr>
+<td>345</td>
+<td><a href="#">	Reverse Vowels of a String </a></td>
+</tr>
+<tr>
+<td>205</td>
+<td><a href="#">	Isomorphic Strings</a></td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 id=""></h2>
+<pre><code>
+</code></pre>
+<p><a href=""></a></p>
+<pre><code class="language-java">
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[leetcode - Array 2]]></title>
+        <id>https://jiannanh.github.io/post/leetcode-array-2/</id>
+        <link href="https://jiannanh.github.io/post/leetcode-array-2/">
+        </link>
+        <updated>2020-08-27T12:30:15.000Z</updated>
+        <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>我的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>121</td>
+<td><a href="#best-time-to-buy-and-sell-stock">Best Time to Buy and Sell Stock</a></td>
+</tr>
+<tr>
+<td>122</td>
+<td><a href="#best-time-to-buy-and-sell-stock-ii">Best Time to Buy and Sell Stock II</a></td>
+</tr>
+<tr>
+<td>123</td>
+<td><a href="#best-time-to-buy-and-sell-stock-iii">Best Time to Buy and Sell Stock III</a></td>
+</tr>
+<tr>
+<td>188</td>
+<td><a href="#best-time-to-buy-and-sell-stock-iv">Best Time to Buy and Sell Stock IV</a></td>
+</tr>
+<tr>
+<td>309</td>
+<td><a href="#best-time-to-buy-and-sell-stock-with-cooldown">Best Time to Buy and Sell Stock with Cooldown</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="#container-with-most-water">Container With Most Water </a></td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="#trapping-rain-water"> Trapping Rain Water</a></td>
+</tr>
+<tr>
+<td>334</td>
+<td><a href="#increasing-triplet-subsequence">Increasing Triplet Subsequence</a></td>
+</tr>
+<tr>
+<td>128</td>
+<td><a href="#longest-consecutive-sequence">Longest Consecutive Sequence</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="#"> </a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="#"> </a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="#"> </a></td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="best-time-to-buy-and-sell-stock">Best Time to Buy and Sell Stock</h2>
+<p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+<p>Note that you cannot sell a stock before you buy one.</p>
+<pre><code>Example 1:
+
+Input: [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+             Not 7-1 = 6, as selling price needs to be larger than buying price.
+Example 2:
+
+Input: [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transaction is done, i.e. max profit = 0.
+</code></pre>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/">121. Best Time to Buy and Sell Stock</a></p>
+<pre><code class="language-java">class Solution {
+    public int maxProfit(int[] prices) {
+        int res = 0;
+        int min = Integer.MAX_VALUE;
+        for (int n : prices) {
+            if (n &lt; min) {
+                min = n;
+            }
+            res = Math.max(res, n - min);
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="best-time-to-buy-and-sell-stock-ii">Best Time to Buy and Sell Stock II</h2>
+<p>Say you have an array prices for which the ith element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).</p>
+<p>Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
+<pre><code>Example 1:
+
+Input: [7,1,5,3,6,4]
+Output: 7
+Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
+             Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+Example 2:
+
+Input: [1,2,3,4,5]
+Output: 4
+Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+             Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are
+             engaging multiple transactions at the same time. You must sell before buying again.
+Example 3:
+
+Input: [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transaction is done, i.e. max profit = 0.
+</code></pre>
+<p>Constraints:</p>
+<p>1 &lt;= prices.length &lt;= 3 * 10 ^ 4<br>
+0 &lt;= prices[i] &lt;= 10 ^ 4</p>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">122. Best Time to Buy and Sell Stock II</a></p>
+<pre><code class="language-java">class Solution {
+    public int maxProfit(int[] prices) {
+        int res = 0;
+        for (int i = 1; i &lt; prices.length; i++) {
+            if (prices[i] &gt; prices[i - 1]) {
+                res += prices[i] - prices[i - 1];
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="best-time-to-buy-and-sell-stock-iii">Best Time to Buy and Sell Stock III</h2>
+<p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete at most two transactions.</p>
+<p>Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
+<pre><code>Example 1:
+
+Input: prices = [3,3,5,0,0,3,1,4]
+Output: 6
+Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
+Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4-1 = 3.
+Example 2:
+
+Input: prices = [1,2,3,4,5]
+Output: 4
+Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.
+Example 3:
+
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transaction is done, i.e. max profit = 0.
+Example 4:
+
+Input: prices = [1]
+Output: 0
+</code></pre>
+<p>Constraints:<br>
+1 &lt;= prices.length &lt;= 105<br>
+0 &lt;= prices[i] &lt;= 105</p>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/">123. Best Time to Buy and Sell Stock III </a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="best-time-to-buy-and-sell-stock-iv">Best Time to Buy and Sell Stock IV</h2>
+<p>Say you have an array for which the i-th element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete at most k transactions.</p>
+<p>Note:<br>
+You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
+<pre><code>Example 1:
+
+Input: [2,4,1], k = 2
+Output: 2
+Explanation: Buy on day 1 (price = 2) and sell on day 2 (price = 4), profit = 4-2 = 2.
+Example 2:
+
+Input: [3,2,6,5,0,3], k = 2
+Output: 7
+Explanation: Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-2 = 4.
+             Then buy on day 5 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
+</code></pre>
+<p>Constraints:<br>
+1 &lt;= prices.length &lt;= 105<br>
+0 &lt;= prices[i] &lt;= 105</p>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/">123. Best Time to Buy and Sell Stock IV</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="best-time-to-buy-and-sell-stock-with-cooldown">Best Time to Buy and Sell Stock with Cooldown</h2>
+<p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times) with the following restrictions:</p>
+<p>You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).<br>
+After you sell your stock, you cannot buy stock on next day. (ie, cooldown 1 day)</p>
+<pre><code>Example:
+
+Input: [1,2,3,0,2]
+Output: 3 
+Explanation: transactions = [buy, sell, cooldown, buy, sell]
+</code></pre>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/">309. Best Time to Buy and Sell Stock with Cooldown</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="container-with-most-water">Container With Most Water</h2>
+<p>Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>
+<p>Note: You may not slant the container and n is at least 2.</p>
+<pre><code>Example:
+Input: [1,8,6,2,5,4,8,3,7]
+Output: 49
+</code></pre>
+<p><a href="https://leetcode.com/problems/container-with-most-water/">11. Container With Most Water</a></p>
+<pre><code class="language-java">class Solution {
+    public int maxArea(int[] height) {
+        int res = 0;
+        int i = 0;
+        int j = height.length - 1;
+        while (i &lt; j) {
+            if (height[i] &gt; height[j]) {
+                res = Math.max(res, height[j] * (j - i));
+                j--;
+            } else {
+                res = Math.max(res, height[i] * (j - i));
+                i++;
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="trapping-rain-water">Trapping Rain Water</h2>
+<p>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.</p>
+<p>The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!</p>
+<pre><code>Example:
+
+Input: [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+</code></pre>
+<p><a href="https://leetcode.com/problems/trapping-rain-water/">42. Trapping Rain Water</a></p>
+<pre><code class="language-java">class Solution {
+    public int trap(int[] height) {
+        int l = 0;
+        int r = height.length -1;
+        int lmax = Integer.MIN_VALUE;
+        int rmax = Integer.MIN_VALUE;
+        int res = 0;
+        while (l &lt;= r) {
+            if (lmax &gt; rmax) {
+                rmax = Math.max(rmax, height[r]);
+                res += rmax - height[r];
+                r--;
+            } else {
+                lmax = Math.max(lmax, height[l]);
+                res += lmax - height[l];
+                l++;
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="increasing-triplet-subsequence">Increasing Triplet Subsequence</h2>
+<p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.</p>
+<p>Formally the function should:</p>
+<p>Return true if there exists i, j, k<br>
+such that arr[i] &lt; arr[j] &lt; arr[k] given 0 ≤ i &lt; j &lt; k ≤ n-1 else return false.<br>
+Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.</p>
+<pre><code>Example 1:
+
+Input: [1,2,3,4,5]
+Output: true
+Example 2:
+
+Input: [5,4,3,2,1]
+Output: false
+</code></pre>
+<p><a href="https://leetcode.com/problems/increasing-triplet-subsequence/">334. Increasing Triplet Subsequence</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="longest-consecutive-sequence">Longest Consecutive Sequence ！！！</h2>
+<p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.</p>
+<p>Your algorithm should run in O(n) complexity.</p>
+<pre><code>Example:
+
+Input: [100, 4, 200, 1, 3, 2]
+Output: 4
+Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
+</code></pre>
+<p><a href="https://leetcode.com/problems/longest-consecutive-sequence/">128. Longest Consecutive Sequence</a></p>
+<pre><code class="language-java">class Solution {
+    public int longestConsecutive(int[] nums) {
+        HashSet&lt;Integer&gt; set = new HashSet&lt;&gt;();
+        for (int n : nums) {
+            set.add(n);
+        }
+        int res = 0;
+        for (int n : nums) {
+            int down = n - 1;
+            while (set.contains(down)) {
+                set.remove(down);
+                down--;
+            }
+            int up = n + 1;
+            while (set.contains(up)) {
+                set.remove(up);
+                up++;
+            }
+            res = Math.max(res, up - down - 1);
+        }
+        return res;
+    }
+}
+</code></pre>
+<h2 id="maximum-gap-桶排序和基数排序">Maximum Gap - 桶排序和基数排序</h2>
+<p>Given an unsorted array, find the maximum difference between the successive elements in its sorted form.</p>
+<p>Return 0 if the array contains less than 2 elements.</p>
+<pre><code>Example 1:
+
+Input: [3,6,9,1]
+Output: 3
+Explanation: The sorted form of the array is [1,3,6,9], either
+             (3,6) or (6,9) has the maximum difference 3.
+Example 2:
+
+Input: [10]
+Output: 0
+Explanation: The array contains less than 2 elements, therefore return 0.
+</code></pre>
+<p>Note:<br>
+You may assume all elements in the array are non-negative integers and fit in the 32-bit signed integer range.<br>
+Try to solve it in linear time/space.<br>
+<a href="https://leetcode.com/problems/maximum-gap/description/">Maximum Gap</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id=""></h2>
+<pre><code>
+</code></pre>
+<p><a href=""></a></p>
+<pre><code class="language-java">
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[gRPC-web]]></title>
         <id>https://jiannanh.github.io/post/cong-ling-kai-shi-grpc/</id>
@@ -918,54 +1331,6 @@ TCP/IP是先实践在生成的模型<br>
 功能3：定义传输速率<br>
 功能4：比特同步<br>
 功能4：比特编码</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 - 1.1速率相关性能指标]]></title>
-        <id>https://jiannanh.github.io/post/ji-suan-ji-wang-luo-su-lu-xiang-guan-xing-neng-zhi-biao/</id>
-        <link href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-su-lu-xiang-guan-xing-neng-zhi-biao/">
-        </link>
-        <updated>2020-08-09T05:37:39.000Z</updated>
-        <content type="html"><![CDATA[<p>塑料布及数据率或称数据传输率或比特率，<br>
-比特 1 / 0<br>
-链接在计算机网络上的主机在数字通道上传送数据的速率。<br>
-1 byte = 8 bite</p>
-<h2 id="带宽">带宽</h2>
-<ol>
-<li><strong>带宽</strong>原本值莫格信号具有的频带宽度，即最高频率与最低频率之差，单位是 Hz。</li>
-<li>计算机网络中，<strong>带宽</strong>用来表示网络的通信线路传送数据的能力，通常是指单位时间内从网络 中的抹一点到零一点所能通过的 <font  color="red">最高数据率</font >。 单位是 ”比特每秒“，b/s，kb/s 。。、<br>
-是网络设备所支持的最高速率</li>
-</ol>
-<h2 id="吞吐量">吞吐量</h2>
-<p>单位时间内通过某个网络（或信道、接口）的数据量，单位是b/s，kb/s<br>
-吞吐量收网络的带宽或者网络的额定速率的限制。</p>
-<h2 id="时延">时延</h2>
-<p>是数据（报文、分组、比特流）从网络（链路）的一端传送到另一端所需要的事件。也叫延迟或者迟延。单位是 s。<br>
-时延 = 发送时延 + 传播时延 + 排队时延 + 处理时延</p>
-<ol>
-<li>
-<p>发送时延<br>
-从发送分组的第一个比特算起到该分组的最后一个比特发送所需要的时间。<br>
-发送时延 = 数据长度 / 信道带宽</p>
-</li>
-<li>
-<p>传播时延<br>
-电磁波的传播速度和链路长度<br>
-传播时延 = 链路长度 / 电磁波的传播速度</p>
-</li>
-<li>
-<p>排队时延<br>
-在路由器等待输入和输出的时间</p>
-</li>
-<li>
-<p>处理时延<br>
-检查找出口，路由器检查错误，并且决定从那个端口输出。</p>
-</li>
-<li>
-<p>往返时延 RTT<br>
-从发送方开始发送数据开始，到发送当接收到接收方是确认，总共时延。</p>
 </li>
 </ol>
 ]]></content>
