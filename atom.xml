@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jiannanh.github.io</id>
     <title>Jiannan</title>
-    <updated>2020-08-30T08:52:13.575Z</updated>
+    <updated>2020-08-30T12:16:27.064Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jiannanh.github.io"/>
     <link rel="self" href="https://jiannanh.github.io/atom.xml"/>
@@ -10,6 +10,408 @@
     <logo>https://jiannanh.github.io/images/avatar.png</logo>
     <icon>https://jiannanh.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jiannan</rights>
+    <entry>
+        <title type="html"><![CDATA[leetcode - Array 5]]></title>
+        <id>https://jiannanh.github.io/post/leetcode-array-5/</id>
+        <link href="https://jiannanh.github.io/post/leetcode-array-5/">
+        </link>
+        <updated>2020-08-30T12:01:26.000Z</updated>
+        <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>我的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>35</td>
+<td><a href="#find-first-and-last-position-of-element-in-sorted-array">Search Insert Position </a></td>
+</tr>
+<tr>
+<td>33</td>
+<td><a href="#search-in-rotated-sorted-array">Search in Rotated Sorted Array </a></td>
+</tr>
+<tr>
+<td>81</td>
+<td><a href="#search-in-rotated-sorted-array-ii"> Search in Rotated Sorted Array II</a></td>
+</tr>
+<tr>
+<td>153</td>
+<td><a href="#find-minimum-in-rotated-sorted-array">	Find Minimum in Rotated Sorted Array </a></td>
+</tr>
+<tr>
+<td>154</td>
+<td><a href="#find-minimum-in-rotated-sorted-array-ii">Find Minimum in Rotated Sorted Array II </a></td>
+</tr>
+<tr>
+<td>162</td>
+<td><a href="#find-peak-element">	Find Peak Element </a></td>
+</tr>
+<tr>
+<td>374</td>
+<td><a href="#guess-number-higher-or-lower">Guess Number Higher or Lower</a></td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="#find-first-and-last-position-of-element-in-sorted-array"> Find First and Last Position of Element in Sorted Array</a></td>
+</tr>
+<tr>
+<td>349</td>
+<td><a href="#intersection-of-two-arrays">Intersection of Two Arrays </a></td>
+</tr>
+<tr>
+<td>350</td>
+<td><a href="#intersection-of-two-arrays-ii">	Intersection of Two Arrays II </a></td>
+</tr>
+<tr>
+<td>315</td>
+<td><a href="#count-of-smaller-numbers-after-self">Count of Smaller Numbers After Self</a></td>
+</tr>
+<tr>
+<td>300</td>
+<td><a href="#longest-increasing-subsequence">Longest Increasing Subsequence</a></td>
+</tr>
+<tr>
+<td>354</td>
+<td><a href="#russian-doll-envelopes">Russian Doll Envelopes</a></td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search-in-rotated-sorted-array">Search in Rotated Sorted Array</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/description/">Search in Rotated Sorted Array</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="search-in-rotated-sorted-array-ii">Search in Rotated Sorted Array II</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/">Search in Rotated Sorted Array II</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="find-minimum-in-rotated-sorted-array">Find Minimum in Rotated Sorted Array</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/">Find Minimum in Rotated Sorted Array</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="find-minimum-in-rotated-sorted-array-ii">Find Minimum in Rotated Sorted Array II</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/">Find Minimum in Rotated Sorted Array II</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="find-peak-element">Find Peak Element</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/find-peak-element/description/">Find Peak Element</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="guess-number-higher-or-lower">Guess Number Higher or Lower</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/guess-number-higher-or-lower/">Guess Number Higher or Lower</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="find-first-and-last-position-of-element-in-sorted-array">Find First and Last Position of Element in Sorted Array</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/"> Find First and Last Position of Element in Sorted Array</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="intersection-of-two-arrays">Intersection of Two Arrays</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/intersection-of-two-arrays/description/"> Intersection of Two Arrays</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="intersection-of-two-arrays-ii">Intersection of Two Arrays II</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/intersection-of-two-arrays-ii/description/">Intersection of Two Arrays II</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="count-of-smaller-numbers-after-self">Count of Smaller Numbers After Self</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/">Count of Smaller Numbers After Self</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="longest-increasing-subsequence">Longest Increasing Subsequence</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/longest-increasing-subsequence/description/">Longest Increasing Subsequence</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="russian-doll-envelopes">Russian Doll Envelopes</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/russian-doll-envelopes/description/">Russian Doll Envelopes</a></p>
+<pre><code class="language-java">
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[leetcode - Array 4]]></title>
+        <id>https://jiannanh.github.io/post/leetcode-array-4/</id>
+        <link href="https://jiannanh.github.io/post/leetcode-array-4/">
+        </link>
+        <updated>2020-08-30T11:56:46.000Z</updated>
+        <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>我的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>238</td>
+<td><a href="#product-of-array-except-self">Product of Array Except Self </a></td>
+</tr>
+<tr>
+<td>152</td>
+<td><a href="#maximum-product-subarray">Maximum Product Subarray </a></td>
+</tr>
+<tr>
+<td>228</td>
+<td><a href="#summary-ranges">Summary Ranges </a></td>
+</tr>
+<tr>
+<td>163</td>
+<td><a href="#missing-ranges">Missing Ranges </a></td>
+</tr>
+<tr>
+<td>88</td>
+<td><a href="#merge-sorted-array">Merge Sorted Array </a></td>
+</tr>
+<tr>
+<td>75</td>
+<td><a href="#sort-colors">Sort Colors </a></td>
+</tr>
+<tr>
+<td>283</td>
+<td><a href="#move-zeroes">Move Zeroes </a></td>
+</tr>
+<tr>
+<td>376</td>
+<td><a href="#wiggle-subsequence">Wiggle Subsequence </a></td>
+</tr>
+<tr>
+<td>280</td>
+<td><a href="#wiggle-sort">Wiggle Sort </a></td>
+</tr>
+<tr>
+<td>324</td>
+<td><a href="#wiggle-sort-ii">Wiggle Sort II </a></td>
+</tr>
+<tr>
+<td>278</td>
+<td><a href="#first-bad-version">	First Bad Version</a></td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="product-of-array-except-self">Product of Array Except Self</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/product-of-array-except-self/description/">Product of Array Except Self</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="maximum-product-subarray">Maximum Product Subarray</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/maximum-product-subarray/description/">Maximum Product Subarray</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="summary-ranges">Summary Ranges</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/summary-ranges/description/">Summary Ranges</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="missing-ranges">Missing Ranges</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/missing-ranges/description/">Missing Ranges</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="merge-sorted-array">Merge Sorted Array</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/merge-sorted-array/description/">Merge Sorted Array</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="sort-colors">Sort Colors</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/sort-colors/description/">Sort Colors</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="move-zeroes">Move Zeroes</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/move-zeroes/description/">Move Zeroes</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="wiggle-subsequence">Wiggle Subsequence</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/wiggle-subsequence/description/">Wiggle Subsequence</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="wiggle-sort">Wiggle Sort</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/wiggle-sort/description/">Wiggle Sort</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="wiggle-sort-ii">Wiggle Sort II</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/wiggle-sort-ii/description/">Wiggle Sort II</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="first-bad-version">First Bad Version</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/first-bad-version/description/">First Bad Version</a></p>
+<pre><code class="language-java">
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[leetcode - Array 3]]></title>
+        <id>https://jiannanh.github.io/post/leetcode-array-3/</id>
+        <link href="https://jiannanh.github.io/post/leetcode-array-3/">
+        </link>
+        <updated>2020-08-30T11:33:43.000Z</updated>
+        <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>我的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>57</td>
+<td><a href="#insert-interval">Insert Interval </a></td>
+</tr>
+<tr>
+<td>56</td>
+<td><a href="#merge-intervals">Merge Intervals </a></td>
+</tr>
+<tr>
+<td>252</td>
+<td><a href="#meeting-rooms"> Meeting Rooms</a></td>
+</tr>
+<tr>
+<td>253</td>
+<td><a href="#meeting-rooms-ii">Meeting Rooms II </a></td>
+</tr>
+<tr>
+<td>352</td>
+<td><a href="#data-stream-as-disjoint-intervals">Data Stream as Disjoint Intervals </a></td>
+</tr>
+<tr>
+<td>239</td>
+<td><a href="#sliding-window-maximum">	Sliding Window Maximum </a></td>
+</tr>
+<tr>
+<td>295</td>
+<td><a href="#find-median-from-data-stream">	Find Median from Data Stream </a></td>
+</tr>
+<tr>
+<td>53</td>
+<td><a href="#maximum-subarray">Maximum Subarray </a></td>
+</tr>
+<tr>
+<td>325</td>
+<td><a href="#maximum-size-subarray-sum-equals-k">Maximum Size Subarray Sum Equals k </a></td>
+</tr>
+<tr>
+<td>209</td>
+<td><a href="#minimum-size-subarray-sum">Minimum Size Subarray Sum </a></td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<h1 id="interval">Interval</h1>
+<h2 id="insert-interval">Insert Interval</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/insert-interval/description/">Insert Interval</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="merge-intervals">Merge Intervals</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/merge-intervals/description/">Merge Intervals</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="meeting-rooms">Meeting Rooms</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/meeting-rooms/description/">Meeting Rooms</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="meeting-rooms-ii">Meeting Rooms II</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/meeting-rooms-ii/description/">Meeting Rooms II</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="data-stream-as-disjoint-intervals">Data Stream as Disjoint Intervals</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/data-stream-as-disjoint-intervals/description/">Data Stream as Disjoint Intervals</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h1 id="counter">Counter</h1>
+<h2 id="sliding-window-maximum">Sliding Window Maximum</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/sliding-window-maximum/description/">Sliding Window Maximum</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="find-median-from-data-stream">Find Median from Data Stream</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/find-median-from-data-stream/description/">Find Median from Data Stream</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="maximum-subarray">Maximum Subarray</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/maximum-subarray/description/">Maximum Subarray</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="maximum-size-subarray-sum-equals-k">Maximum Size Subarray Sum Equals k</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/">Maximum Size Subarray Sum Equals k</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="minimum-size-subarray-sum">Minimum Size Subarray Sum</h2>
+<pre><code>
+</code></pre>
+<p><a href="https://leetcode.com/problems/minimum-size-subarray-sum/description/">Minimum Size Subarray Sum</a></p>
+<pre><code class="language-java">
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[leetcode -string 1]]></title>
         <id>https://jiannanh.github.io/post/leetcode-string-1/</id>
@@ -129,8 +531,8 @@
 <td><a href="#longest-consecutive-sequence">Longest Consecutive Sequence</a></td>
 </tr>
 <tr>
-<td></td>
-<td><a href="#"> </a></td>
+<td>287</td>
+<td><a href="#"> Find the Duplicate Number</a></td>
 </tr>
 <tr>
 <td></td>
@@ -269,7 +671,34 @@ Explanation: Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-
 1 &lt;= prices.length &lt;= 105<br>
 0 &lt;= prices[i] &lt;= 105</p>
 <p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/">123. Best Time to Buy and Sell Stock IV</a></p>
-<pre><code class="language-java">
+<pre><code class="language-java">class Solution {
+    public int maxProfit(int k, int[] prices) {
+        int len = prices.length;
+        if (k &gt; len/2) return helper(k, prices);
+        //如果可以无限次交易的话
+        int[][] dp = new int[k+1][len];//最大收益
+        //i次数，j天数
+        for (int i = 1; i &lt;= k; i++) {
+            int tmpMax = -prices[0];
+            for (int j = 1; j &lt; len; j++) {
+                dp[i][j] = Math.max(dp[i][j-1], tmpMax+prices[j]);
+                //收益=之前最大收益，或者之前最大收益+今日价格
+                tmpMax = Math.max(tmpMax, dp[i-1][j-1]-prices[j]);
+                // 卖出=之前收益，或者之前(i-1)最大收益-今日价格，dp[i-1][j-1] 假如只能买一次不可能是dp[i][j]或者dp[i][j-1]
+            }
+        }
+        return dp[k][len-1];
+    }
+    private int helper (int k, int[] prices) {
+        int max = 0;
+        for (int i = 1; i &lt; prices.length; i++) {
+            if (prices[i] &gt; prices[i - 1]) {
+                max += prices[i] - prices[i - 1];
+            }
+        }
+        return max;
+    }
+}
 </code></pre>
 <h2 id="best-time-to-buy-and-sell-stock-with-cooldown">Best Time to Buy and Sell Stock with Cooldown</h2>
 <p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
@@ -415,10 +844,63 @@ Try to solve it in linear time/space.<br>
 <a href="https://leetcode.com/problems/maximum-gap/description/">Maximum Gap</a></p>
 <pre><code class="language-java">
 </code></pre>
-<h2 id=""></h2>
-<pre><code>
+<h2 id="find-the-duplicate-number">Find the Duplicate Number</h2>
+<p>Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.</p>
+<pre><code>Example 1:
+
+Input: [1,3,4,2,2]
+Output: 2
+Example 2:
+
+Input: [3,1,3,4,2]
+Output: 3
 </code></pre>
-<p><a href=""></a></p>
+<p><a href="https://leetcode.com/problems/find-the-duplicate-number/">287. Find the Duplicate Number</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="candy">Candy</h2>
+<p>There are N children standing in a line. Each child is assigned a rating value.</p>
+<p>You are giving candies to these children subjected to the following requirements:</p>
+<p>Each child must have at least one candy.<br>
+Children with a higher rating get more candies than their neighbors.<br>
+What is the minimum candies you must give?</p>
+<pre><code>Example 1:
+
+Input: [1,0,2]
+Output: 5
+Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.
+Example 2:
+
+Input: [1,2,2]
+Output: 4
+Explanation: You can allocate to the first, second and third child with 1, 2, 1 candies respectively.
+             The third child gets 1 candy because it satisfies the above two conditions.
+</code></pre>
+<p><a href="https://leetcode.com/problems/candy/description/">135. Candy</a></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="patching-array">Patching Array</h2>
+<p>Given a sorted positive integer array nums and an integer n, add/patch elements to the array such that any number in range [1, n] inclusive can be formed by the sum of some elements in the array. Return the minimum number of patches required.</p>
+<pre><code>Example 1:
+
+Input: nums = [1,3], n = 6
+Output: 1 
+Explanation:
+Combinations of nums are [1], [3], [1,3], which form possible sums of: 1, 3, 4.
+Now if we add/patch 2 to nums, the combinations are: [1], [2], [3], [1,3], [2,3], [1,2,3].
+Possible sums are 1, 2, 3, 4, 5, 6, which now covers the range [1, 6].
+So we only need 1 patch.
+Example 2:
+
+Input: nums = [1,5,10], n = 20
+Output: 2
+Explanation: The two patches can be [2, 4].
+Example 3:
+
+Input: nums = [1,2,2], n = 5
+Output: 0
+</code></pre>
+<p><a href="https://leetcode.com/problems/patching-array/description/">330. Patching Array</a></p>
 <pre><code class="language-java">
 </code></pre>
 ]]></content>
@@ -1204,135 +1686,6 @@ message HelloReply {
         <content type="html"><![CDATA[<h2 id="前言">前言</h2>
 <p>https://blog.csdn.net/ThinkWon/article/details/104778621</p>
 <p><a href="#%E5%89%8D%E8%A8%80">前言</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 - 网络层]]></title>
-        <id>https://jiannanh.github.io/post/ji-suan-ji-wang-luo-wang-luo-ceng/</id>
-        <link href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-wang-luo-ceng/">
-        </link>
-        <updated>2020-08-09T11:20:00.000Z</updated>
-        <content type="html"><![CDATA[<p>IP<br>
-主要任务是把分组从源端传到目的端，为分组交换网上的不同主机提供通信服务。网络层传输单位是数据报。<br>
-功能1：路由选择与分组转发最佳路径<br>
-功能2：实现异构网络的互联<br>
-功能3：拥塞控制</p>
-<h2 id="数据交换方式">数据交换方式</h2>
-<p>多路复用</p>
-<h3 id="报文交换">报文交换</h3>
-<p>优点：</p>
-<ol>
-<li>无需建立连接</li>
-<li>存储转发动态分配线路</li>
-<li>线路可靠性高</li>
-<li>线路利用率较高</li>
-<li>多目标服务</li>
-</ol>
-<p>缺点：</p>
-<ol>
-<li>有存储时延</li>
-<li>报文大小不确定，需要网络罗节点偶较大的存储空间。</li>
-</ol>
-<h3 id="分组交换">分组交换</h3>
-<ol>
-<li>无需建立连接</li>
-<li>存储转发，动态分贝线路</li>
-<li>线路可靠性较高</li>
-<li>线路利用率较高</li>
-<li>有利与报文交换，存储管理容易</li>
-</ol>
-<p>缺点：</p>
-<ol>
-<li>有存储时延</li>
-<li>需要额外的信息量</li>
-<li>乱序到目的主机时，要对分组排序重组</li>
-</ol>
-<h2 id="几种传输单元名词辨析">几种传输单元名词辨析</h2>
-<figure data-type="image" tabindex="1"><img src="https://jiannanh.github.io/post-images/1596973848020.png" alt="" loading="lazy"></figure>
-<h3 id="数据报">数据报</h3>
-<p>无连接：不是先为分组的传输确定传输路径，每个分组独立确定传输路径，不同分组传输路径可能不同。</p>
-<h2 id="路由算法和路由协议">路由算法和路由协议</h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 - 1.3TCP/IP模型]]></title>
-        <id>https://jiannanh.github.io/post/ji-suan-ji-wang-luo-tcpip-mo-xing/</id>
-        <link href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-tcpip-mo-xing/">
-        </link>
-        <updated>2020-08-09T08:17:18.000Z</updated>
-        <content type="html"><![CDATA[<p>TCP/IP是实时模型<br>
-TCP/IP是先实践在生成的模型<br>
-<img src="https://jiannanh.github.io/post-images/1596961494042.png" alt="" loading="lazy"><br>
-<img src="https://jiannanh.github.io/post-images/1596964775219.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 - 1.2OSI分层]]></title>
-        <id>https://jiannanh.github.io/post/ji-suan-ji-wang-luo-osi-fen-ceng/</id>
-        <link href="https://jiannanh.github.io/post/ji-suan-ji-wang-luo-osi-fen-ceng/">
-        </link>
-        <updated>2020-08-09T06:33:09.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="osi-分层">OSI 分层</h2>
-<p>7层OSI法定标准<br>
-物理层 - 数据链路层 - 网络层 - 传输层 - 会话层- 表示层 - 应用层<br>
-通信子网 -           - 资源子网<br>
-物联网输会示用</p>
-<p>5层体系结构，方便学习。<br>
-4层事实模型</p>
-<ol>
-<li>
-<p>应用层<br>
-需要上网才能使用的程序</p>
-</li>
-<li>
-<p>表示层<br>
-处理两个通讯徐通中光交换信息的表示方式<br>
-功能1：数据格式变换<br>
-功能2：数据加密解密<br>
-功能3：数据压缩和恢复</p>
-</li>
-<li>
-<p>会话层<br>
-建立连接并在连接上有序地传输数据。这就是会话也是建立同步（SYN）。<br>
-功能1：建立、管理、终止会话<br>
-功能2：使用校验点可是会话在通讯失效时从校验点、同步点继续灰度通讯，实现数据同步。</p>
-</li>
-<li>
-<p>传输层<br>
-负责主机中两个进程的通信，即端到端的通信。传输单位是保温段或用户数据报。<br>
-1：可靠传输、不可靠传输<br>
-2：差错控制<br>
-3：流量控制<br>
-4：复用分用</p>
-</li>
-<li>
-<p>网络层<br>
-主要任务是把分组从远端传到目的端，为分组交换网上的不同主机提供通信服务网络层传输单位是数据拥报。<br>
-功能1：路由选择<br>
-功能2：流量选择<br>
-功能3：差错控制<br>
-功能4：拥塞控制</p>
-</li>
-<li>
-<p>数据链路层<br>
-把网络层传下来的数据报组装成帧<br>
-数据链路层/链路层的传输单位是帧。<br>
-功能1：成帧<br>
-功能2：差错控制<br>
-功能3：流量控制<br>
-功能4：访问（接入）控制</p>
-</li>
-<li>
-<p>物理层<br>
-主要任务是在物理媒体上实现比特流的透明传输。<br>
-物理层传输单位是比特<br>
-功能1：定义接口特性<br>
-功能2：定义传输模式<br>
-功能3：定义传输速率<br>
-功能4：比特同步<br>
-功能4：比特编码</p>
-</li>
-</ol>
 ]]></content>
     </entry>
 </feed>
